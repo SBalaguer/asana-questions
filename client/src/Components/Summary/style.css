@@ -1,0 +1,33 @@
+.input {
+  width: 100%;
+  margin-top: 1em;
+  padding: 1.5em;
+  background-color: transparent;
+  color: #b144a1;
+  border: 0px;
+  border-bottom: 1px solid #b144a1;
+}
+
+.input:last-of-type {
+  margin-bottom: 1em;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b144a1;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #b144a1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #b144a1;
+}
+
+.user-info {
+  width: 70%;
+}

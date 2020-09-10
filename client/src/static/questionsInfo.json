@@ -1,0 +1,101 @@
+{
+  "age": {
+    "title": "Cuántos años tenes?",
+    "options": [
+      { "label": "Menor de 18 años", "value": "less18" },
+      { "label": "18 a 24 años", "value": "18-24" },
+      { "label": "25 a 35 años", "value": "25-35" },
+      { "label": "36 años o más", "value": "36More" }
+    ]
+  },
+  "births": {
+    "title": "Tuviste partos?",
+    "options": [
+      { "label": "No tuve partos", "value": "no", "points": ["rectaS", "curvaS"] },
+      { "label": "Sí, tuve parto natural", "value": "natural", "points": ["rectaL", "curvaL"] },
+      { "label": "Sí, tuve parto por cesárea", "value": "surgery", "points": ["rectaS", "curvaS"] },
+      {
+        "label": "Sí, tuve parto por cesárea y natural",
+        "value": "naturalSurgery",
+        "points": ["rectaL", "curvaL"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Cuál es tu experiencia con la copa menstrual?",
+    "subtitle": "(podés marcar más de una)",
+    "options": [
+      {
+        "label": "Nunca usé una copa Mensutral.",
+        "value": "notUse",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "La copa me parece larga para mí, o tuve que cortarle el tallo.",
+        "value": "long",
+        "points": ["curvaS", "curvaL"]
+      },
+      {
+        "label": "La copa me es difícil de agarrar o extraer.",
+        "value": "diffcultUse",
+        "points": ["rectaS", "rectaL"],
+        "exclude": ["curvaS", "curvaL"]
+      },
+      {
+        "label": "Me cuesta que la copa se abra totalmente.",
+        "value": "doesNotOpen",
+        "points": ["rectaS", "rectaL"]
+      },
+      {
+        "label": "Mi copa menstrual me resulta Ok, pero me gustaría probar una diferente.",
+        "value": "okTryNew",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      }
+    ]
+  },
+  "preference": {
+    "title": "Prefiero tener una copa menstrual que sea, por sobre todo...",
+    "options": [
+      {
+        "label": "Más fácil de colocar y extraer de mi cuerpo",
+        "value": "easy",
+        "points": ["rectaS", "rectaL"]
+      },
+      {
+        "label": "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer",
+        "value": "hard",
+        "points": ["curvaS", "curvaL"]
+      }
+    ]
+  },
+  "cervixHeight": {
+    "title": "Cuál es la altura de tu cérvix?",
+    "subtitle": "Para localizarlo, debes insertar (con las manos limpias) tu dedo índice en la vagina hasta localizar algo similar a una nariz.",
+    "options": [
+      {
+        "label": "Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)",
+        "value": "tall",
+        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726714/Asana/Asana-Alto_g6erj3.png",
+        "points": ["rectaS", "rectaL"]
+      },
+      {
+        "label": "Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)",
+        "value": "medium",
+        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726713/Asana/Asana-Medio_wntawi.png",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)",
+        "value": "small",
+        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726711/Asana/Asana-Bajo_yu7bb5.png",
+        "points": ["curvaS", "curvaL"]
+      },
+      {
+        "label": "No tengo idea. Prefiero no verificarlo.",
+        "value": "noIdea",
+        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726711/Asana/Asana-NoSabe_zgcrzu.png",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      }
+    ]
+  }
+}

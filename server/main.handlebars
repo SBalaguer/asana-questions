@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hello {
+        font-size: 26px;
+      }
+      .subtitle {
+        font-size: 16px;
+        color: #22a5a5;
+      }
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+      }
+      .summary_container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 0.3em;
+        max-width: 50vw;
+      }
+      .summary_question {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+      }
+      .summary_question-bullet {
+        width: 10%;
+      }
+      .summary_question-question {
+        color: #b144a1;
+        margin-bottom: 0.1em;
+      }
+      .asana {
+        color: #b144a1;
+      }
+      .answers {
+        margin-top: 1em;
+        padding: 0.8em;
+        border-top: 1px solid #b144a1;
+        border-bottom: 1px solid #b144a1;
+      }
+
+      .buy {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .button {
+        padding: 0.5em 1.2em;
+        width: 120px;
+        margin: 0.5em;
+        background-color: #b144a1;
+        border-radius: 30px;
+        height: 30px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+
+      .disclaimer {
+        font-size: 10px;
+        font-style: italic;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .recommendation {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 0.5em;
+        padding: 1em;
+        border: 1px solid #b144a1;
+        border-radius: 10px;
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .product-title {
+        font-size: 16px;
+        color: #b144a1;
+        font-weight: bold;
+        margin: 0.8em;
+      }
+      .product-image {
+        width: 180px;
+        height: 180px;
+        background-image: url('{{reco.image}}');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .black {
+        color: inherit;
+      }
+
+      .footer {
+        margin-top: 0.5em;
+      }
+
+      @media screen and (min-width: 750px) {
+        .buy {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hello">Hola <span class="asana">{{name}}</span>!</div>
+    <div class="subtitle black">
+      A continuación vas a encontrar tu <span class="asana">Asana Test</span> y nuestra
+      recomendación.
+    </div>
+    <div class="subtitle">Bienvenida a tu nuevo ciclo <span>🤗💜</span></div>
+    <section class="recommendation">
+      <div class="subtitle">Recomendación</div>
+      <div class="product">
+        <div class="product-title">{{reco.name}}</div>
+        <div class="product-image"></div>
+        <div class="buy">
+          <a
+            class="button"
+            href="{{reco.linkToBuy}}"
+            target="_blank"
+            >Comprar</a
+          >
+          <a class="button" href="{{reco.linkToBuyDuo}}" target="_blank"
+            >Promo Duo - XX% Descuento!</a
+          >
+        </div>
+      </div>
+      <div class="disclaimer">
+        Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y modelos
+        que también resulten bien para tu caso.
+      </div>
+      <div class="disclaimer bold">El precio incluye ENVIO GRATIS 🚚 a todo el país.</div>
+    </section>
+    <section class="answers">
+      <div class="subtitle">Tus respuestas</div>
+      {{#each answers}}
+      <div class="summary_container">
+        <div class="summary_question-bullet">✨</div>
+        <div class="summary_question">
+          <div class="summary_question-question">{{question}}</div>
+          <div class="summary_answer">{{answer}}</div>
+        </div>
+      </div>
+      {{/each}}
+    </section>
+    <section class="footer">
+      <div>Hecho con <span>💜</span> por la sustentabilidad <span>🌱</span></div>
+      <div>Conoce más en <a href="www.asanacup.com" target="_blanck">Asana.com</a></div>
+    </section>
+  </body>
+</html>
