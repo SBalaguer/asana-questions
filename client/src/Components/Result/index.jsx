@@ -24,10 +24,15 @@ export default function Result({ userInfo, reco }) {
             }}
           ></div>
           <div className="buy">
-            <a className="button" href={reco.linkToBuy} target="_blank">
+            <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
               Comprar
             </a>
-            <a className="button" href={reco.linkToBuyDuo} target="_blank">
+            <a
+              className="button"
+              href={reco.linkToBuyDuo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Promo Duo - XX% Descuento!
             </a>
           </div>
@@ -36,7 +41,13 @@ export default function Result({ userInfo, reco }) {
           Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
           modelos que también resulten bien para tu caso.
         </div>
-        <div className="disclaimer bold">El precio incluye ENVIO GRATIS 🚚 a todo el país.</div>
+        <div className="disclaimer bold">
+          El precio incluye ENVIO GRATIS{' '}
+          <span role="img" aria-label="truck">
+            🚚
+          </span>{' '}
+          a todo el país.
+        </div>
       </section>
     </div>
   );

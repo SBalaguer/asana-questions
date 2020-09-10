@@ -40,7 +40,7 @@ export default function Question(props) {
     setValue('');
   };
 
-  const { title, name, subtitle, options, first, last } = props;
+  const { title, subtitle, options, first, last } = props;
 
   return (
     <div className="container">
