@@ -49,7 +49,13 @@ export default function Question(props) {
       <form>
         {options.map((option) => {
           return (
-            <div className="questions" key={Math.random() * Date.now()}>
+            <div 
+            className={
+              option.image
+                ? 'questionsWithImage'
+                : 'questions'
+            }
+            key={Math.random() * Date.now()}>
               {option.image ? (
                 <div className="image" style={{ backgroundImage: `url(${option.image})` }}></div>
               ) : null}
@@ -63,13 +69,38 @@ export default function Question(props) {
               />
               <label htmlFor={option.value}>{option.label}</label>
             </div>
+            
+            // Version anterior (Santi) - Tom cambia para que quede bien la imagen
+            // <div 
+            // className={
+            //   option.image
+            //     ? 'questionsWithImage'
+            //     : 'questions'
+            // }
+            // key={Math.random() * Date.now()}>
+            //   {option.image ? (
+            //     <div className="image" style={{ backgroundImage: `url(${option.image})` }}></div>
+            //   ) : null}
+            //   <input
+            //     type="radio"
+            //     checked={checkChecked(option.label)}
+            //     id={option.value}
+            //     onChange={manageSelectionChange}
+            //     name={title}
+            //     value={option.label}
+            //   />
+            //   <label htmlFor={option.value}>{option.label}</label>
+            // </div>
+
+
+
           );
         })}
       </form>
       <div className="button-container">
         {!first && (
           <button className="button-arrow" onClick={() => move('prev')}>
-            {'<'}
+            {'← Volver'}
           </button>
         )}
         <button
@@ -84,8 +115,9 @@ export default function Question(props) {
           }
           disabled={value.length ? false : true}
           onClick={() => move('next')}
+          // onclick="window.scrollTo(0, 0);"
         >
-          {!last ? '>' : 'Resúmen'}
+          {!last ? 'Siguiente →' : 'Finalizar ✓'}
         </button>
       </div>
     </div>

@@ -32,9 +32,9 @@ router.post('/answers', async (req, res, next) => {
   try {
     await Answers.create({ email, name, phone, answers, reco: reco.name });
     await transporter.sendMail({
-      from: `Asana <${process.env.MAIL}>`,
+      from: `Asana Copa Menstrual <${process.env.MAIL}>`,
       to: email,
-      subject: 'Resultados del Asana test ✨',
+      subject: 'Resultados de tu test',
       template: 'main',
       context: {
         name,

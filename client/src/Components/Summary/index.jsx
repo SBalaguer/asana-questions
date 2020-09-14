@@ -6,13 +6,13 @@ import SummaryAnswer from '../SummaryAnswer';
 export default function Summary(props) {
   return (
     <div className="container">
-      <h3>Genial! Estas son tus respuestas:</h3>
+      {/* <h3>Listo! Estas son tus respuestas:</h3>
       <ul>
         {props.answers.map((answer) => (
           <SummaryAnswer key={answer.question} {...answer} />
         ))}
-      </ul>
-      <h3>Contanos un poco más: </h3>
+      </ul> */}
+      <h3>Te enviaremos los resultados a tu mail! </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -40,7 +40,7 @@ export default function Summary(props) {
           onChange={props.handleUserInputChange}
           placeholder="Teléfono"
         />
-        <button>Ver Resultado!</button>
+        <button>Ver Resultado</button>
       </form>
     </div>
   );

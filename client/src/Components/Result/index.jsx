@@ -5,11 +5,10 @@ import './style.css';
 export default function Result({ userInfo, reco }) {
   return (
     <div className="container">
-      <h3>Felicitaciones {userInfo.name}</h3>
+      <h3 className="subtitle">¡Felicitaciones {userInfo.name}!</h3>
       <h3 style={{ marginTop: 0 }}>
-        Terminaste tu <span className="asana">Asana Test</span>!
+      Terminaste el test. A continuación verás nuestra recomendación.
       </h3>
-      <h3 className="subtitle">Esta es nuestra recomendación</h3>
       <section className="recommendation">
         <div className="product">
           <div className="product-title">{reco.name}</div>
@@ -25,7 +24,7 @@ export default function Result({ userInfo, reco }) {
           ></div>
           <div className="buy">
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-              Comprar
+              COMPRAR 1 COPA
             </a>
             <a
               className="button"
@@ -33,7 +32,7 @@ export default function Result({ userInfo, reco }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Promo Duo - XX% Descuento!
+              COMPRAR PROMO DUO 20% OFF
             </a>
           </div>
         </div>
@@ -42,7 +41,7 @@ export default function Result({ userInfo, reco }) {
           modelos que también resulten bien para tu caso.
         </div>
         <div className="disclaimer bold">
-          El precio incluye ENVIO GRATIS{' '}
+          El precio incluye ENVÍO GRATIS{' '}
           <span role="img" aria-label="truck">
             🚚
           </span>{' '}

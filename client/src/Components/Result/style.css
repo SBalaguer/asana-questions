@@ -5,7 +5,7 @@
   color: #22a5a5;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Montserrat,sans-serif,Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
 }
 .summary_container {
@@ -47,31 +47,33 @@ body {
   padding: 0.5em 1.2em;
   width: 120px;
   margin: 0.5em;
-  background-color: #b144a1;
-  border-radius: 30px;
+  background-color: #b140a0;
+  border-radius: 5px;
   height: 30px;
-  color: white;
+  color:#f7f7f7;
   text-decoration: none;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  font-weight: 600;
 }
 
 .disclaimer {
   font-size: 10px;
   font-style: italic;
+  margin-top:10px;
 }
 .bold {
   font-weight: bold;
 }
 .recommendation {
-  width: 50%;
+  width: 66%;
   margin: 0 auto;
   margin-top: 0.5em;
   padding: 1em;
-  border: 1px solid #b144a1;
+  border: 2px solid #b144a1;
   border-radius: 10px;
 }
 .product {

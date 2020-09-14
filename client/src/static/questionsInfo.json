@@ -1,15 +1,15 @@
 {
   "age": {
-    "title": "Cuántos años tenes?",
+    "title": "¿Cuántos años tenes?",
     "options": [
-      { "label": "Menor de 18 años", "value": "less18" },
+      { "label": "Menos de 18 años", "value": "less18" },
       { "label": "18 a 24 años", "value": "18-24" },
       { "label": "25 a 35 años", "value": "25-35" },
       { "label": "36 años o más", "value": "36More" }
     ]
   },
   "births": {
-    "title": "Tuviste partos?",
+    "title": "¿Tuviste partos?",
     "options": [
       { "label": "No tuve partos", "value": "no", "points": ["rectaS", "curvaS"] },
       { "label": "Sí, tuve parto natural", "value": "natural", "points": ["rectaL", "curvaL"] },
@@ -22,7 +22,7 @@
     ]
   },
   "experience": {
-    "title": "Cuál es tu experiencia con la copa menstrual?",
+    "title": "¿Cuál es tu experiencia con la copa menstrual?",
     "subtitle": "(podés marcar más de una)",
     "options": [
       {
@@ -69,8 +69,8 @@
     ]
   },
   "cervixHeight": {
-    "title": "Cuál es la altura de tu cérvix?",
-    "subtitle": "Para localizarlo, debes insertar (con las manos limpias) tu dedo índice en la vagina hasta localizar algo similar a una nariz.",
+    "title": "¿Cuál es la altura de tu cérvix?",
+    "subtitle": "Para localizarlo, debes introducir (con las manos limpias) tu dedo índice en la vagina hasta localizar algo similar a una nariz.",
     "options": [
       {
         "label": "Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)",
