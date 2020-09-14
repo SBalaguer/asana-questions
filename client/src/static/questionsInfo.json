@@ -1,6 +1,6 @@
 {
   "age": {
-    "title": "¿Cuántos años tenes?",
+    "title": "¿Cuántos años tenés?",
     "options": [
       { "label": "Menos de 18 años", "value": "less18" },
       { "label": "18 a 24 años", "value": "18-24" },

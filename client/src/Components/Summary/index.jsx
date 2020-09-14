@@ -12,7 +12,7 @@ export default function Summary(props) {
           <SummaryAnswer key={answer.question} {...answer} />
         ))}
       </ul> */}
-      <h3>Te enviaremos los resultados a tu mail! </h3>
+      <h3>Contanos un poco de vos. Te enviaremos los resultados a tu email. </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"

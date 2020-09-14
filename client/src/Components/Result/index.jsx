@@ -7,7 +7,7 @@ export default function Result({ userInfo, reco }) {
     <div className="container">
       <h3 className="subtitle">¡Felicitaciones {userInfo.name}!</h3>
       <h3 style={{ marginTop: 0 }}>
-      Terminaste el test. A continuación verás nuestra recomendación.
+      Nuestra recomendación es el siguiente modelo y talle.
       </h3>
       <section className="recommendation">
         <div className="product">
@@ -24,7 +24,7 @@ export default function Result({ userInfo, reco }) {
           ></div>
           <div className="buy">
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-              COMPRAR 1 COPA
+              COMPRAR AHORA $1,399
             </a>
             <a
               className="button"
@@ -32,13 +32,9 @@ export default function Result({ userInfo, reco }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              COMPRAR PROMO DUO 20% OFF
+            PROMO DUO -20% ¡A $1,119 c/u!
             </a>
           </div>
-        </div>
-        <div className="disclaimer">
-          Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
-          modelos que también resulten bien para tu caso.
         </div>
         <div className="disclaimer bold">
           El precio incluye ENVÍO GRATIS{' '}
@@ -46,6 +42,10 @@ export default function Result({ userInfo, reco }) {
             🚚
           </span>{' '}
           a todo el país.
+        </div>
+        <div className="disclaimer">
+          Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
+          modelos que también resulten bien para tu caso.
         </div>
       </section>
     </div>

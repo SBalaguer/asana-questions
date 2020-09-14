@@ -75,9 +75,8 @@ function App() {
       return (
         <div className="container">
           <h3 className="title">
-            El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos.
+            El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos. ¿Estás lista?
           </h3>
-          <h3 className="lista">¿Estás lista?</h3>
           <button onClick={() => handleNextQuestion(0)}>INICIAR</button>
         </div>
       );
