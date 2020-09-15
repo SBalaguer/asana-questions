@@ -12,7 +12,7 @@ export default function Summary(props) {
           <SummaryAnswer key={answer.question} {...answer} />
         ))}
       </ul> */}
-      <h3>Contanos un poco de vos. Te enviaremos los resultados a tu email. </h3>
+      <h3>Dejanos tus datos así te enviaremos los resultados a tu email. </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -40,7 +40,7 @@ export default function Summary(props) {
           onChange={props.handleUserInputChange}
           placeholder="Teléfono"
         />
-        <button>Ver Resultado</button>
+        <button>VER RESULTADO</button>
       </form>
     </div>
   );

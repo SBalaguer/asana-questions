@@ -100,7 +100,7 @@ export default function Question(props) {
       <div className="button-container">
         {!first && (
           <button className="button-arrow" onClick={() => move('prev')}>
-            {'← Volver'}
+            {'← ANTERIOR'}
           </button>
         )}
         <button
@@ -117,7 +117,7 @@ export default function Question(props) {
           onClick={() => move('next')}
           // onclick="window.scrollTo(0, 0);"
         >
-          {!last ? 'Siguiente →' : 'Finalizar ✓'}
+          {!last ? 'SIGUIENTE →' : 'FINALIZAR'}
         </button>
       </div>
     </div>

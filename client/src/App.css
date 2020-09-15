@@ -30,7 +30,8 @@ button {
   border: 0px solid transparent;
   border-radius: 5px;
   background-color: #d4c5e0;
-  padding: 1em;
+  padding: 10px;
+  font-size: 1.5em;
   margin: 1em;
   min-width: 100px;
   font-weight: 600;
@@ -41,7 +42,7 @@ button {
   font-size: 1em;
   padding: 1em;
   margin: 0.6em;
-  width: 75px;
+  width: 9em;
   font-weight: 700;
 }
 

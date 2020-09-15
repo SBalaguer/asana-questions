@@ -22,27 +22,31 @@ export default function Result({ userInfo, reco }) {
               backgroundSize: 'contain'
             }}
           ></div>
-          <div className="buy">
-            <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-              COMPRAR AHORA $1,399
-            </a>
-            <a
-              className="button"
-              href={reco.linkToBuyDuo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-            PROMO DUO -20% ¡A $1,119 c/u!
-            </a>
-          </div>
-        </div>
-        <div className="disclaimer bold">
-          El precio incluye ENVÍO GRATIS{' '}
+          <div className="product-description">{reco.description}</div>
+          <div className="product-price1">Precio: $1399</div>
+          <div className="product-price2">Precio Promo Duo: $1119 c/u</div>
+          <div className="disclaimer bold">
+          El precio incluye ENVÍO GRATIS {' '}
           <span role="img" aria-label="truck">
             🚚
           </span>{' '}
           a todo el país.
         </div>
+          <div className="buy">
+            <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
+              COMPRAR AHORA
+            </a>
+            <a
+              className="buttonPromo"
+              href={reco.linkToBuyDuo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            COMPRAR PROMO DUO
+            </a>
+          </div>
+        </div>
+        
         <div className="disclaimer">
           Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
           modelos que también resulten bien para tu caso.

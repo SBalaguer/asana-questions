@@ -47,6 +47,23 @@ body {
   padding: 0.5em 1.2em;
   width: 120px;
   margin: 0.5em;
+  background-color: #be89cf;
+  border-radius: 5px;
+  height: 30px;
+  color:#f7f7f7;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.buttonPromo {
+  padding: 0.5em 1.2em;
+  width: 120px;
+  margin: 0.5em;
   background-color: #b140a0;
   border-radius: 5px;
   height: 30px;
@@ -57,20 +74,21 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .disclaimer {
   font-size: 10px;
-  font-style: italic;
   margin-top:10px;
-  color: #b144a1
+  color: #b144a1;
+  font-style: italic;
 }
 .bold {
   font-weight: bold;
+  font-style: normal;
 }
 .recommendation {
-  width: 66%;
+  width: 72%;
   margin: 0 auto;
   margin-top: 0.5em;
   padding: 1em;
@@ -89,6 +107,28 @@ body {
   font-weight: bold;
   margin: 0.8em;
 }
+
+.product-description{
+  font-size: 11px;
+  margin-top:5px;
+  color: #b144a1;
+  text-align:center;
+}
+
+.product-price1{
+  font-size: 13px;
+  margin-top:10px;
+  color: #b144a1;
+  font-weight: bold;
+}
+
+.product-price2{
+  font-size: 13px;
+  color: #44afb1;
+  font-weight: bold;
+  margin: 5px;
+}
+
 .product-image {
   width: 180px;
   height: 180px;
