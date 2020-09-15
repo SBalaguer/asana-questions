@@ -7,7 +7,7 @@ export default function Result({ userInfo, reco }) {
     <div className="container">
       <h3 className="subtitle">¡Felicitaciones {userInfo.name}!</h3>
       <h3 style={{ marginTop: 0 }}>
-      Nuestra recomendación es el siguiente modelo y talle.
+      Nuestra recomendación es el siguiente modelo y talle:
       </h3>
       <section className="recommendation">
         <div className="product">
