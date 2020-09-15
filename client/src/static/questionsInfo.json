@@ -25,7 +25,7 @@
     "title": "¿Cuál es tu experiencia con la copa menstrual?",
     "options": [
       {
-        "label": "Nunca usé una copa Mensutral.",
+        "label": "Nunca usé una copa menstrual.",
         "value": "notUse",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       },

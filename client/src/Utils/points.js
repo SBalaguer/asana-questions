@@ -11,7 +11,7 @@ const pointsSchema = [
   {
     question: 'Cuál es tu experiencia con la copa menstrual?',
     answers: {
-      'Nunca usé una copa Mensutral.': {
+      'Nunca usé una copa menstrual.': {
         points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
         exclude: []
       },
