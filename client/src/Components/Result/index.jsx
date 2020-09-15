@@ -21,29 +21,39 @@ export default function Result({ userInfo, reco }) {
             }}
           ></div>
           <div className="product-description">{reco.description}</div>
-          <div className="product-price1">Precio: $1399</div>
-          <div className="product-price2">Precio Promo Duo: $1119 c/u</div>
-          <div className="disclaimer bold">
-            El precio incluye ENVÍO GRATIS{' '}
-            <span role="img" aria-label="truck">
-              🚚
-            </span>{' '}
-            a todo el país.
-          </div>
+
           <div className="buy">
+          <div className="buyColumn">
+          
+            <div className="product-price1 light">1 copa</div>
+            <div className="product-price1">$1,399</div>
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-              COMPRAR AHORA
+                COMPRAR 1 COPA
             </a>
-            <a
-              className="buttonPromo"
-              href={reco.linkToBuyDuo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          </div>
+          
+          <div className="buyColumn">
+          
+          <div className="product-price2 light">Promo Duo</div>
+          <div className="product-price2">$1,119 c/u</div>
+          <a className="buttonPromo" href={reco.linkToBuyDuo} target="_blank" rel="noopener noreferrer">
               COMPRAR PROMO DUO
-            </a>
+          </a>
+          </div>
+
+          </div>
+
+          <div className="disclaimer bold">
+            Los precios incluyen <span className="dark">ENVÍO GRATIS</span> a todo el país y una <span className="dark">CLASE DE YOGA</span> de prueba.
+            {/* <span role="img" aria-label="truck"> 🚚
+            </span>{' '} */}
           </div>
         </div>
+
+        <div className="disclaimer underline">
+          <a href="https://asanacup.com/pages/elegi-tu-copa" target="_blank" rel="noopener noreferrer">Para ver las diferencias entre nuestros modelos, hacé click aqui.
+          </a>
+          </div>
 
         <div className="disclaimer">
           Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y

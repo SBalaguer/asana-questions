@@ -39,15 +39,24 @@ body {
 }
 
 .buy {
+width: 100%;
+padding: 1em 0px;
+justify-content: space-between;
+display: flex;
+}
+
+.buyColumn{
   display: flex;
   flex-direction: column;
+  width:50%;
+  align-items:center;
 }
 
 .button {
   padding: 0.5em 1.2em;
-  width: 120px;
+  width: 85px;
   margin: 0.5em;
-  background-color: #be89cf;
+  background-color: #b144a1;
   border-radius: 5px;
   height: 30px;
   color:#f7f7f7;
@@ -62,9 +71,9 @@ body {
 
 .buttonPromo {
   padding: 0.5em 1.2em;
-  width: 120px;
+  width: 85px;
   margin: 0.5em;
-  background-color: #b140a0;
+  background-color: #22a7a5;
   border-radius: 5px;
   height: 30px;
   color:#f7f7f7;
@@ -78,15 +87,37 @@ body {
 }
 
 .disclaimer {
-  font-size: 10px;
+  font-size: 8px;
   margin-top:10px;
   color: #b144a1;
   font-style: italic;
 }
 .bold {
-  font-weight: bold;
   font-style: normal;
+  margin-top:0px;
+  width:88%;
+  border: 1px solid #b144a1;
+  padding: .5em;
+  font-size:10px;
 }
+
+.dark{
+  font-weight: bold;
+  font-size:10px;
+}
+.underline{
+  text-decoration: underline;
+  font-style: normal;
+  color:#22a7a5;
+  font-size:10px;
+}
+
+a{
+  color:#107573;
+  font-weight: 600;
+  font-size:10px;
+}
+
 .recommendation {
   width: 72%;
   margin: 0 auto;
@@ -108,6 +139,7 @@ body {
   margin: 0.8em;
 }
 
+
 .product-description{
   font-size: 11px;
   margin-top:5px;
@@ -117,7 +149,6 @@ body {
 
 .product-price1{
   font-size: 13px;
-  margin-top:10px;
   color: #b144a1;
   font-weight: bold;
 }
@@ -126,7 +157,10 @@ body {
   font-size: 13px;
   color: #44afb1;
   font-weight: bold;
-  margin: 5px;
+}
+
+.light{
+  font-weight: 500;
 }
 
 .product-image {
