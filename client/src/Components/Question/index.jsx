@@ -49,29 +49,32 @@ export default function Question(props) {
       <form>
         {options.map((option) => {
           return (
-            <div 
-            className={
-              option.image
-                ? 'questionsWithImage'
-                : 'questions'
-            }
-            key={Math.random() * Date.now()}>
-              {option.image ? (
-                <div className="image" style={{ backgroundImage: `url(${option.image})` }}></div>
-              ) : null}
-              <input
-                type="radio"
-                checked={checkChecked(option.label)}
-                id={option.value}
-                onChange={manageSelectionChange}
-                name={title}
-                value={option.label}
-              />
-              <label htmlFor={option.value}>{option.label}</label>
+            <div
+              className={option.image ? 'questionsWithImage' : 'questions'}
+              key={Math.random() * Date.now()}
+            >
+              <label
+                className={option.image ? 'labelImage' : 'labelNoImage'}
+                htmlFor={option.value}
+              >
+                <input
+                  style={{ marginRight: '1.5em' }}
+                  type="radio"
+                  checked={checkChecked(option.label)}
+                  id={option.value}
+                  onChange={manageSelectionChange}
+                  name={title}
+                  value={option.label}
+                />
+                {option.label}
+                {option.image ? (
+                  <div className="image" style={{ backgroundImage: `url(${option.image})` }}></div>
+                ) : null}
+              </label>
             </div>
-            
+
             // Version anterior (Santi) - Tom cambia para que quede bien la imagen
-            // <div 
+            // <div
             // className={
             //   option.image
             //     ? 'questionsWithImage'
@@ -91,9 +94,6 @@ export default function Question(props) {
             //   />
             //   <label htmlFor={option.value}>{option.label}</label>
             // </div>
-
-
-
           );
         })}
       </form>
@@ -108,10 +108,10 @@ export default function Question(props) {
             value.length
               ? !last
                 ? 'button-arrow'
-                : ''
+                : 'button-arrow-last'
               : !last
               ? 'button-arrow disabled'
-              : 'disabled'
+              : 'button-arrow-last disabled'
           }
           disabled={value.length ? false : true}
           onClick={() => move('next')}

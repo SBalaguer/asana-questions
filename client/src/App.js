@@ -35,7 +35,22 @@ function App() {
 
   const handleUserInputChange = (event) => {
     const name = event.target.name;
-    const value = event.target.value;
+    let value = event.target.value;
+
+    if (name === 'name' && value) {
+      //quiero hacer la primer letra mayuscula
+      value = value
+        .split(' ')
+        .map((word) => {
+          if (word.length) {
+            return word[0].toUpperCase() + word.slice(1).toLowerCase();
+          } else {
+            return word;
+          }
+        })
+        .join(' ');
+    }
+
     setUserInfo({ ...userInfo, [name]: value });
   };
 
@@ -75,7 +90,8 @@ function App() {
       return (
         <div className="container">
           <h3 className="title">
-            El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos. ¿Estás lista?
+            El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos.
+            ¿Estás lista?
           </h3>
           <button onClick={() => handleNextQuestion(0)}>INICIAR</button>
         </div>

@@ -6,9 +6,7 @@ export default function Result({ userInfo, reco }) {
   return (
     <div className="container">
       <h3 className="subtitle">¡Felicitaciones {userInfo.name}!</h3>
-      <h3 style={{ marginTop: 0 }}>
-      Nuestra recomendación es el siguiente modelo y talle:
-      </h3>
+      <h3 style={{ marginTop: 0 }}>Nuestra recomendación es el siguiente modelo y talle:</h3>
       <section className="recommendation">
         <div className="product">
           <div className="product-title">{reco.name}</div>
@@ -26,12 +24,12 @@ export default function Result({ userInfo, reco }) {
           <div className="product-price1">Precio: $1399</div>
           <div className="product-price2">Precio Promo Duo: $1119 c/u</div>
           <div className="disclaimer bold">
-          El precio incluye ENVÍO GRATIS {' '}
-          <span role="img" aria-label="truck">
-            🚚
-          </span>{' '}
-          a todo el país.
-        </div>
+            El precio incluye ENVÍO GRATIS{' '}
+            <span role="img" aria-label="truck">
+              🚚
+            </span>{' '}
+            a todo el país.
+          </div>
           <div className="buy">
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
               COMPRAR AHORA
@@ -42,11 +40,11 @@ export default function Result({ userInfo, reco }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-            COMPRAR PROMO DUO
+              COMPRAR PROMO DUO
             </a>
           </div>
         </div>
-        
+
         <div className="disclaimer">
           Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
           modelos que también resulten bien para tu caso.

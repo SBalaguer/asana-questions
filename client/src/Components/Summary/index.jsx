@@ -21,16 +21,18 @@ export default function Summary(props) {
           name="name"
           value={props.userInfo['name']}
           onChange={props.handleUserInputChange}
-          placeholder="Nombre"
+          placeholder="* Nombre"
+          autoComplete="off"
         />
         <input
           className="input"
           required
-          type="mail"
+          type="email"
           name="email"
           value={props.userInfo['email']}
           onChange={props.handleUserInputChange}
-          placeholder="Email"
+          placeholder="* Email"
+          autoComplete="off"
         />
         <input
           className="input"
@@ -39,6 +41,7 @@ export default function Summary(props) {
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
           placeholder="Teléfono"
+          autoComplete="off"
         />
         <button>VER RESULTADO</button>
       </form>

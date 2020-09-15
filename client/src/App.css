@@ -13,17 +13,17 @@ h3 {
   max-width: 90vw;
   text-align: left;
   font-size: 2em;
-  margin-left:16px;
+  margin-left: 16px;
 }
 
 h6 {
-  margin-top:-14px;
-  margin-bottom:0px;
-  margin-left:16px;
+  margin-top: -14px;
+  margin-bottom: 0px;
+  margin-left: 16px;
   text-align: left;
   width: 90vw;
-  font-size:1.1em;
-  color:#6ee6e5;
+  font-size: 1.1em;
+  color: #6ee6e5;
 }
 
 button {
@@ -35,10 +35,20 @@ button {
   margin: 1em;
   min-width: 100px;
   font-weight: 600;
-  color:#642f79;
+  color: #642f79;
 }
 
 .button-arrow {
+  font-size: 1em;
+  padding: 1em;
+  margin: 0.6em;
+  width: 9em;
+  font-weight: 700;
+}
+
+.button-arrow-last {
+  background-color: #22a7a5;
+  color: white;
   font-size: 1em;
   padding: 1em;
   margin: 0.6em;

@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,500&display=swap');
+
 body {
   margin: 0;
-  font-family: Montserrat,sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color:white;
-  background-color:#7e3e98;
+  color: white;
+  background-color: #7e3e98;
 }
 
 code {
-  font-family: Montserrat,sans-serif,source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Montserrat', sans-serif, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-
-input[type="radio"] {
+input[type='radio'] {
   margin-left: 16px;
 }
