@@ -85,3 +85,7 @@ label {
   display: flex;
   margin-left: 1em;
 }
+
+.selected {
+  background-color: #22a7a5;
+}

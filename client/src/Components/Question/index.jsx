@@ -50,7 +50,15 @@ export default function Question(props) {
         {options.map((option) => {
           return (
             <div
-              className={option.image ? 'questionsWithImage' : 'questions'}
+              className={
+                checkChecked(option.label)
+                  ? option.image
+                    ? 'questionsWithImage selected'
+                    : 'questions selected'
+                  : option.image
+                  ? 'questionsWithImage'
+                  : 'questions'
+              }
               key={Math.random() * Date.now()}
             >
               <label
@@ -58,7 +66,7 @@ export default function Question(props) {
                 htmlFor={option.value}
               >
                 <input
-                  style={{ marginRight: '1.5em' }}
+                  style={{ marginRight: '1.5em', display: 'none' }}
                   type="radio"
                   checked={checkChecked(option.label)}
                   id={option.value}
