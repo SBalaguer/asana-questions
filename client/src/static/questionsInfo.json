@@ -96,5 +96,35 @@
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       }
     ]
+  },
+  "whyBuy": {
+    "title": "¿Cuál es tu principal motivo para pasarte a la Copa Menstrual?",
+    "options": [
+      {
+        "label": "Ecología: Evitar los 5kg de plásticos que genero con toallitas y tampones.",
+        "value": "eco",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Salud: Usar un método más natural, sin químicos que interactúen con mi cuerpo.",
+        "value": "health",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Confort: Sentirme más cómoda con mis períodos.",
+        "value": "confort",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Economía: Ahorrar los ~$2700 por año que gasto en toallitas y/o tampones.",
+        "value": "economy",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Otro",
+        "value": "other",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      }
+    ]
   }
 }

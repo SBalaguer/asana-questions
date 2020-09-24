@@ -168,6 +168,19 @@ function App() {
           handleInputChange={handleInputChange}
           handleNextQuestion={handleNextQuestion}
           handlePreviousQuestion={handlePreviousQuestion}
+          answers={answers}
+        />
+      );
+    case 6:
+      return (
+        <Question
+          name={'whyBuy'}
+          title={listOfQuestions.whyBuy.title}
+          options={listOfQuestions.whyBuy.options}
+          question={6}
+          handleInputChange={handleInputChange}
+          handleNextQuestion={handleNextQuestion}
+          handlePreviousQuestion={handlePreviousQuestion}
           last
           answers={answers}
         />
