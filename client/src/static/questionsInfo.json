@@ -101,7 +101,7 @@
     "title": "¿Cuál es tu principal motivo para pasarte a la Copa Menstrual?",
     "options": [
       {
-        "label": "Ecología: Evitar los 5kg de plásticos que genero con toallitas y tampones.",
+        "label": "Ecología: Evitar hasta 150kg de plástico que genero con toallitas y tampones.",
         "value": "eco",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       },
