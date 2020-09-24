@@ -1,9 +1,12 @@
 import React from 'react';
 
 import './style.css';
-import SummaryAnswer from '../SummaryAnswer';
 
 export default function Summary(props) {
+  const refreshPage = () => {
+    window.location.reload(true);
+  };
+
   return (
     <div className="container">
       {/* <h3>Listo! Estas son tus respuestas:</h3>
@@ -43,8 +46,28 @@ export default function Summary(props) {
           placeholder="Teléfono"
           autoComplete="off"
         />
-        <button>VER RESULTADO</button>
+        {(!props.error &&
+          ((props.loading && <button disabled>CALCULANDO . . .</button>) || (
+            <button>VER RESULTADO</button>
+          ))) ||
+          null}
       </form>
+      {props.error && (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>
+            Hubo un error{' '}
+            <span role="img" aria-label="sad">
+              😕
+            </span>
+          </h4>
+          <button style={{ marginTop: '0px' }} onClick={refreshPage}>
+            <span role="img" aria-label="refresh">
+              🔄
+            </span>{' '}
+            TEST
+          </button>
+        </div>
+      )}
     </div>
   );
 }

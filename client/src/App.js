@@ -15,6 +15,8 @@ function App() {
   const [answers, setAnswers] = useState([]);
   const [userInfo, setUserInfo] = useState({});
   const [reco, setReco] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleInputChange = (event) => {
     const name = event.target.name;
@@ -56,6 +58,7 @@ function App() {
 
   const handleSubmision = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const reco = recomendationEngine(answers);
     setReco(linksToBuy[reco]);
     const info = {
@@ -67,8 +70,11 @@ function App() {
       const response = await sendAnswers(info);
       if (response.success) {
         setQuestion('result');
+      } else {
+        setError(true);
       }
     } catch (error) {
+      setError(true);
       console.log(error);
     }
   };
@@ -173,7 +179,9 @@ function App() {
           handleSubmision={handleSubmision}
           answers={answers}
           listOfQuestions={listOfQuestions}
+          loading={loading}
           userInfo={userInfo}
+          error={error}
         />
       );
     case 'result':
