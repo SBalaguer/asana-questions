@@ -15,7 +15,7 @@ export default function Summary(props) {
           <SummaryAnswer key={answer.question} {...answer} />
         ))}
       </ul> */}
-      <h3>Dejanos tus datos así te enviamos los resultados a tu email. </h3>
+      <h3>Dejanos tus datos así te enviamos los resultados por email. </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
