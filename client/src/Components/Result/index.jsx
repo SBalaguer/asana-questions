@@ -51,7 +51,7 @@ export default function Result({ userInfo, reco }) {
         </div>
 
         <div className="disclaimer underline">
-          <a href="https://asanacup.com/pages/elegi-tu-copa" target="_blank" rel="noopener noreferrer">Para ver las diferencias entre nuestros modelos, hacé click aqui.
+          <a href="https://asanacup.com#comparador" target="_blank" rel="noopener noreferrer">Para ver las diferencias entre nuestros modelos, hacé click aqui.
           </a>
           </div>
 

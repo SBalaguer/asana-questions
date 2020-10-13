@@ -126,6 +126,7 @@ a{
   /* border: 2px solid #b144a1; */
   border-radius: 10px;
   background: white;
+  max-width: 420px;
 }
 .product {
   display: flex;
