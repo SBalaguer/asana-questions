@@ -39,7 +39,7 @@ export default function Summary(props) {
         />
         <input
           className="input"
-          type="text"
+          type="number"
           name="phone"
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}

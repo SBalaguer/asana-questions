@@ -39,7 +39,8 @@ router.post('/answers', async (req, res, next) => {
       context: {
         name,
         answers,
-        reco
+        reco,
+        phone
       }
     });
     res.json({ success: true });
