@@ -29,6 +29,8 @@ router.get('/answers', (req, res, next) => {
 router.post('/answers', async (req, res, next) => {
   const { answers, reco } = req.body;
   const { email, name, phone } = req.body.userInfo;
+  console.log(name);
+  console.log(phone);
   try {
     await Answers.create({ email, name, phone, answers, reco: reco.name });
     await transporter.sendMail({
