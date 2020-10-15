@@ -14,12 +14,26 @@ const app = express();
 app.set('trust proxy', 1);
 app.set('views', path.join(__dirname, 'views'));
 
+const whitelist = ['https://test.asanacup.com/', process.env.FRONT_END_URL];
+
 app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(express.json());
+// app.use(
+//   cors({
+//     origin: [process.env.FRONT_END_URL],
+//     credentials: true
+//   })
+// );
 app.use(
   cors({
-    origin: [process.env.FRONT_END_URL],
+    origin: function(origin, callback) {
+      if (whitelist.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     credentials: true
   })
 );
