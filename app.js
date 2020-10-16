@@ -19,24 +19,24 @@ const whitelist = ['https://test.asanacup.com/', process.env.FRONT_END_URL];
 app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: [process.env.FRONT_END_URL],
-//     credentials: true
-//   })
-// );
 app.use(
   cors({
-    origin: function(origin, callback) {
-      if (whitelist.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
+    origin: [process.env.FRONT_END_URL],
     credentials: true
   })
 );
+// app.use(
+//   cors({
+//     origin: function(origin, callback) {
+//       if (whitelist.indexOf(origin) !== -1) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     },
+//     credentials: true
+//   })
+// );
 
 app.use('/', indexRouter);
 
