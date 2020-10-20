@@ -15,7 +15,7 @@ export default function Summary(props) {
           <SummaryAnswer key={answer.question} {...answer} />
         ))}
       </ul> */}
-      <h3>Dejanos tus datos así te enviamos los resultados por email. </h3>
+      <h3>Dejanos tus datos así te enviamos los resultados. </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -24,7 +24,7 @@ export default function Summary(props) {
           name="name"
           value={props.userInfo['name']}
           onChange={props.handleUserInputChange}
-          placeholder="* Nombre"
+          placeholder="* Nombre o apodo preferido"
           autoComplete="off"
         />
         <input
@@ -47,8 +47,8 @@ export default function Summary(props) {
           autoComplete="off"
         />
         {(!props.error &&
-          ((props.loading && <button disabled>CALCULANDO . . .</button>) || (
-            <button>VER RESULTADO</button>
+          ((props.loading && <button disabled>Calculando...</button>) || (
+            <button>VER SUGERENCIA</button>
           ))) ||
           null}
       </form>
@@ -64,7 +64,7 @@ export default function Summary(props) {
             <span role="img" aria-label="refresh">
               🔄
             </span>{' '}
-            TEST
+            Rehacer
           </button>
         </div>
       )}
