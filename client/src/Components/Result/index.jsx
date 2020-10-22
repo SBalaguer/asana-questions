@@ -25,13 +25,13 @@ export default function Result({ userInfo, reco }) {
           <div className="buy">
           <div className="buyColumn">
           
-            <div className="product-price1 light">1 copa</div>
-            <div className="product-price1">$1,399</div>
+            {/* <div className="product-price1 light">1 copa</div>
+            <div className="product-price1">$1,399</div> */}
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-                COMPRAR 1 COPA
+                LA QUIERO
             </a>
           </div>
-          
+{/*           
           <div className="buyColumn">
           
           <div className="product-price2 light">Promo Duo</div>
@@ -39,19 +39,19 @@ export default function Result({ userInfo, reco }) {
           <a className="buttonPromo" href={reco.linkToBuyDuo} target="_blank" rel="noopener noreferrer">
               COMPRAR PROMO DUO
           </a>
-          </div>
+          </div> */}
 
           </div>
 
           <div className="disclaimer bold">
-            Los precios incluyen <span className="dark">ENVÍO GRATIS</span> a todo el país y una <span className="dark">CLASE DE YOGA</span> de prueba.
+            Estamos haciendo <span className="dark">ENVÍOS GRATIS</span> a todo el país!
             {/* <span role="img" aria-label="truck"> 🚚
             </span>{' '} */}
           </div>
         </div>
 
         <div className="disclaimer underline">
-          <a href="https://asanacup.com#comparador" target="_blank" rel="noopener noreferrer">Para ver las diferencias entre nuestros modelos, hacé click aqui.
+          <a href="https://asanacup.com/pages/elegi-tu-copa" rel="noopener noreferrer">VER DIFERENCIAS ENTRE MODELOS
           </a>
           </div>
 

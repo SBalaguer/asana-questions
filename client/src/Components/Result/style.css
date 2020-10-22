@@ -39,16 +39,16 @@ body {
 }
 
 .buy {
-width: 84%;
+width: 50%;
 padding: 1em 0px;
 justify-content: space-between;
-display: flex;
+/* display: flex; */
 }
 
 .buyColumn{
   display: flex;
   flex-direction: column;
-  width:50%;
+  /* width:50%; */
   align-items:center;
 }
 
@@ -56,7 +56,7 @@ display: flex;
   padding: 0.5em 1.2em;
   width: 85px;
   margin: 0.5em;
-  background-color: #b144a1;
+  background-color: #be89cf;
   border-radius: 5px;
   height: 30px;
   color:#f7f7f7;
@@ -65,7 +65,7 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -99,6 +99,7 @@ display: flex;
   border: 1px solid #b144a1;
   padding: .5em;
   font-size:13px;
+  text-align:center;
 }
 
 .dark{
@@ -106,10 +107,10 @@ display: flex;
   font-size:13px;
 }
 .underline{
-  text-decoration: underline;
   font-style: normal;
   color:#22a7a5;
-  font-size:10px;
+  font-size:11px;
+  text-align:center;
 }
 
 a{
