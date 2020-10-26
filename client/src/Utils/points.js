@@ -2,10 +2,18 @@ const pointsSchema = [
   {
     question: 'Tuviste partos?',
     answers: {
-      'No tuve partos': { points: ['rectaS', 'curvaS'], exclude: [] },
-      'Sí, tuve parto natural': { points: ['rectaL', 'curvaL'], exclude: [] },
-      'Sí, tuve parto por cesárea': { points: ['rectaS', 'curvaS'], exclude: [] },
-      'Sí, tuve parto por cesárea y natural': { points: ['rectaL', 'curvaL'], exclude: [] }
+      'No tuve partos': { 
+        points: ['rectaS', 'curvaS'], 
+        exclude: ['rectaL', 'curvaL'] },
+      'Sí, tuve parto natural': { 
+        points: ['rectaL', 'curvaL'], 
+        exclude: ['rectaS', 'curvaS'] },
+      'Sí, tuve parto por cesárea': { 
+        points: ['rectaS', 'curvaS'], 
+        exclude: ['rectaL', 'curvaL'] },
+      'Sí, tuve parto por cesárea y natural': { 
+        points: ['rectaL', 'curvaL'], 
+        exclude: ['rectaS', 'curvaS'] }
     }
   },
   {
@@ -33,7 +41,9 @@ const pointsSchema = [
   {
     question: 'Prefiero tener una copa menstrual que sea, por sobre todo...',
     answers: {
-      'Más fácil de colocar y extraer de mi cuerpo': { points: ['rectaS', 'rectaL'], exclude: [] },
+      'Más fácil de colocar y extraer de mi cuerpo': { 
+        points: ['rectaS', 'rectaL'], 
+        exclude: [] },
       "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
         points: ['curvaS', 'curvaL'],
         exclude: []
