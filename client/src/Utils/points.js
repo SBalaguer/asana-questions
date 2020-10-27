@@ -1,6 +1,6 @@
 const pointsSchema = [
   {
-    question: 'Tuviste partos?',
+    question: '¿Tuviste partos?',
     answers: {
       'No tuve partos': { 
         points: ['rectaS', 'curvaS'], 
@@ -17,7 +17,7 @@ const pointsSchema = [
     }
   },
   {
-    question: 'Cuál es tu experiencia con la copa menstrual?',
+    question: '¿Cuál es tu experiencia con la copa menstrual?',
     answers: {
       'Nunca usé una copa menstrual.': {
         points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
@@ -31,7 +31,10 @@ const pointsSchema = [
         points: ['rectaS', 'rectaL'],
         exclude: ['curvaS', 'curvaL']
       },
-      'Me cuesta que la copa se abra totalmente.': { points: ['rectaS', 'rectaL'], exclude: [] },
+      'Me cuesta que la copa se abra totalmente.': { 
+        points: ['rectaS', 'rectaL'], 
+        exclude: [] 
+      },
       'Mi copa menstrual me resulta Ok, pero me gustaría probar una diferente.': {
         points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
         exclude: []
@@ -51,7 +54,7 @@ const pointsSchema = [
     }
   },
   {
-    question: 'Cuál es la altura de tu cérvix?',
+    question: '¿Cuál es la altura de tu cérvix?',
     answers: {
       'Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)': {
         points: ['rectaS', 'rectaL'],

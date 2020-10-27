@@ -80,28 +80,6 @@ export default function Question(props) {
                 ) : null}
               </label>
             </div>
-
-            // Version anterior (Santi) - Tom cambia para que quede bien la imagen
-            // <div
-            // className={
-            //   option.image
-            //     ? 'questionsWithImage'
-            //     : 'questions'
-            // }
-            // key={Math.random() * Date.now()}>
-            //   {option.image ? (
-            //     <div className="image" style={{ backgroundImage: `url(${option.image})` }}></div>
-            //   ) : null}
-            //   <input
-            //     type="radio"
-            //     checked={checkChecked(option.label)}
-            //     id={option.value}
-            //     onChange={manageSelectionChange}
-            //     name={title}
-            //     value={option.label}
-            //   />
-            //   <label htmlFor={option.value}>{option.label}</label>
-            // </div>
           );
         })}
       </form>
