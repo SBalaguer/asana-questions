@@ -31,8 +31,8 @@ router.post('/answers', async (req, res, next) => {
   const { email, name, phone } = req.body.userInfo;
   // console.log(name);
   // console.log(phone);
-  console.log(req.body);
-  console.log(reco);
+  // console.log(req.body);
+  // console.log(reco);
   try {
     await Answers.create({ email, name, phone, answers, reco: reco.name });
     await transporter.sendMail({
@@ -49,7 +49,7 @@ router.post('/answers', async (req, res, next) => {
     });
     res.json({ success: true });
   } catch (error) {
-    next(error);
+    res.json({ success: false, error: { message: error.message } }).status(500);
   }
 });
 

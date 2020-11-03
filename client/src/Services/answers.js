@@ -6,10 +6,11 @@ const api = axios.create({
 });
 
 export const sendAnswers = async (body) => {
+  let response;
   try {
-    const response = await api.post('/answers', body);
+    response = await api.post('/answers', body);
     return response.data;
   } catch (error) {
-    console.log(error);
+    return response.error;
   }
 };
