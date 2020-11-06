@@ -74,6 +74,7 @@ function App() {
         if (response.error.message.includes('Daily user sending quota exceeded')) {
           setQuestion('result');
         } else {
+          // setQuestion('result');
           setError(true);
         }
       }
