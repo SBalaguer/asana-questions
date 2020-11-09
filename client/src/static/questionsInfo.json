@@ -126,5 +126,25 @@
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       }
     ]
+  },
+  "sportLevel": {
+    "title": "¿Cómo te llevás con el deporte?",
+    "options": [
+      {
+        "label": "No me gusta mucho el deporte.",
+        "value": "none",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Trato de hacer deporte 1 vez por semana.",
+        "value": "low",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+      },
+      {
+        "label": "Soy deportista, o hago actividad física más de 2 veces por semana.",
+        "value": "high",
+        "points": ["curvaS", "curvaL"]
+      }
+    ]
   }
 }

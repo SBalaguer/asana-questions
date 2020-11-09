@@ -5,8 +5,8 @@ import './style.css';
 export default function Result({ userInfo, reco }) {
   return (
     <div className="container">
-      <h3 className="subtitle">¡Felicitaciones {userInfo.name}!</h3>
-      <h3 style={{ marginTop: 0 }}>Nuestra recomendación es el siguiente modelo y talle:</h3>
+      <h3 className="subtitle">¡Listo! La copa ideal para vos es:</h3>
+      {/* <h3 style={{ marginTop: 0 }}>La copa ideal para vos es:</h3> */}
       <section className="recommendation">
         <div className="product">
           <div className="product-title">{reco.name}</div>
@@ -28,7 +28,7 @@ export default function Result({ userInfo, reco }) {
             {/* <div className="product-price1 light">1 copa</div>
             <div className="product-price1">$1,399</div> */}
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-                LA QUIERO
+                PROBALA CON ENVÍO GRATIS!
             </a>
           </div>
 {/*           
@@ -43,11 +43,10 @@ export default function Result({ userInfo, reco }) {
 
           </div>
 
-          <div className="disclaimer bold">
+          {/* <div className="disclaimer bold">
             Estamos haciendo <span className="dark">ENVÍOS GRATIS</span> a todo el país!
             {/* <span role="img" aria-label="truck"> 🚚
             </span>{' '} */}
-          </div>
         </div>
 
         <div className="disclaimer underline">

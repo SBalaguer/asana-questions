@@ -178,10 +178,24 @@ function App() {
     case 6:
       return (
         <Question
+          name={'sportLevel'}
+          title={listOfQuestions.sportLevel.title}
+          subtitle={listOfQuestions.sportLevel.subtitle}
+          options={listOfQuestions.sportLevel.options}
+          question={6}
+          handleInputChange={handleInputChange}
+          handleNextQuestion={handleNextQuestion}
+          handlePreviousQuestion={handlePreviousQuestion}
+          answers={answers}
+        />
+      );
+    case 7:
+      return (
+        <Question
           name={'whyBuy'}
           title={listOfQuestions.whyBuy.title}
           options={listOfQuestions.whyBuy.options}
-          question={6}
+          question={7}
           handleInputChange={handleInputChange}
           handleNextQuestion={handleNextQuestion}
           handlePreviousQuestion={handlePreviousQuestion}

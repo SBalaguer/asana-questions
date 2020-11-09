@@ -73,6 +73,23 @@ const pointsSchema = [
         exclude: []
       }
     }
+  },
+  {
+    question: '¿Cómo te llevás con el deporte?',
+    answers: {
+      'No me gusta mucho el deporte.': {
+        points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
+        exclude: []
+      },
+      'Trato de hacer deporte 1 vez por semana.': {
+        points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
+        exclude: []
+      },
+      'Soy deportista, o hago actividad física más de 2 veces por semana.': {
+        points: ['curvaS', 'curvaL'],
+        exclude: []
+      }
+    }
   }
 ];
 

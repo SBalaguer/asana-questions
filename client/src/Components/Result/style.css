@@ -1,9 +1,9 @@
 .hello {
   font-size: 26px;
 }
-.subtitle {
+/* .subtitle {
   color: #22a5a5;
-}
+} */
 body {
   font-family: Montserrat,sans-serif,Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
@@ -53,10 +53,10 @@ justify-content: space-between;
 }
 
 .button {
-  padding: 0.5em 1.2em;
-  width: 85px;
-  margin: 0.5em;
-  background-color: #be89cf;
+  padding: 0.6em 1.2em;
+  width: 128px;
+  /* margin: 0.5em; */
+  background-color: #7e3e98;
   border-radius: 5px;
   height: 30px;
   color:#f7f7f7;
@@ -88,7 +88,7 @@ justify-content: space-between;
 
 .disclaimer {
   font-size: 8px;
-  margin-top:10px;
+  margin-top:6px;
   color: #b144a1;
   font-style: italic;
 }
@@ -122,7 +122,7 @@ a{
 .recommendation {
   width: 78%;
   margin: 0 auto;
-  margin-top: 0.5em;
+  margin-top: -10px;
   padding: 1em;
   /* border: 2px solid #b144a1; */
   border-radius: 10px;
