@@ -30,23 +30,38 @@ router.post('/answers', async (req, res, next) => {
   const { answers, reco } = req.body;
   const { email, name, phone } = req.body.userInfo;
   // console.log(name);
-  // console.log(phone);
+  console.log(phone);
   // console.log(req.body);
   // console.log(reco);
   try {
     await Answers.create({ email, name, phone, answers, reco: reco.name });
-    await transporter.sendMail({
-      from: `Asana Copa Menstrual <${process.env.MAIL}>`,
-      to: email,
-      subject: 'Resultado de tu test de copa menstrual',
-      template: 'main',
-      context: {
-        name,
-        answers,
-        reco,
-        phone
-      }
-    });
+    if (phone && phone.length >= 8 && phone.length <= 11) {
+      await transporter.sendMail({
+        from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+        to: email,
+        subject: 'Resultado de tu test de copa menstrual',
+        template: 'main',
+        context: {
+          name,
+          answers,
+          reco,
+          phone
+        }
+      });
+    } else {
+      await transporter.sendMail({
+        from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+        to: email,
+        subject: 'La copa menstrual ideal para vos',
+        template: 'main',
+        context: {
+          name,
+          answers,
+          reco,
+          phone
+        }
+      });
+    }
     res.json({ success: true });
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
