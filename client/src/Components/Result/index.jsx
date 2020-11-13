@@ -5,7 +5,7 @@ import './style.css';
 export default function Result({ userInfo, reco }) {
   return (
     <div className="container">
-      <h3 className="subtitle">¡Listo! La copa ideal para vos es:</h3>
+      <h3 className="subtitle">¡Listo! La copa ideal para vos es 👇</h3>
       {/* <h3 style={{ marginTop: 0 }}>La copa ideal para vos es:</h3> */}
       <section className="recommendation">
         <div className="product">
