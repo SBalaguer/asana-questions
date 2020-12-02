@@ -35,6 +35,8 @@ router.post('/answers', async (req, res, next) => {
   // console.log(reco);
   try {
     await Answers.create({ email, name, phone, answers, reco: reco.name });
+    const sendName = name.trim().split(' ')[0];
+    const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
     if (phone && phone.length >= 8 && phone.length <= 11) {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
@@ -42,7 +44,7 @@ router.post('/answers', async (req, res, next) => {
         subject: 'Tu copa menstrual con envío gratis',
         template: 'main',
         context: {
-          name,
+          name: sendNameCapital,
           answers,
           reco,
           phone
@@ -55,7 +57,7 @@ router.post('/answers', async (req, res, next) => {
         subject: 'Tu copa menstrual ideal con envío gratis',
         template: 'main',
         context: {
-          name,
+          name: sendNameCapital,
           answers,
           reco,
           phone
