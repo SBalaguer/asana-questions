@@ -35,7 +35,7 @@ const pointsSchema = [
         points: ['rectaS', 'rectaL', 'curvaL','curvaS'], 
         exclude: [] 
       },
-      'Mi copa menstrual me resulta Ok, pero me gustaría probar una diferente.': {
+      'Mi copa menstrual me resulta bien, pero me gustaría probar una diferente.': {
         points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
         exclude: []
       }
@@ -48,9 +48,8 @@ const pointsSchema = [
         points: ['rectaS','rectaL'], 
         exclude: [] },
       "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
-        points: ['rectaS', 'curvaS', 'curvaL'],
+        points: ['curvaS', 'curvaL'],
         exclude: []
-        //agregue rectaS
       }
     }
   },
@@ -87,9 +86,8 @@ const pointsSchema = [
         exclude: []
       },
       'Soy deportista, o hago actividad física más de 2 veces por semana.': {
-        points: ['curvaS', 'curvaL','rectaS', 'rectaL'],
+        points: ['curvaS', 'curvaL'],
         exclude: []
-        //agrego recta. 
       }
     }
   }
