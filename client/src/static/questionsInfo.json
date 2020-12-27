@@ -46,7 +46,7 @@
         "points": ["rectaS", "rectaL"]
       },
       {
-        "label": "Mi copa menstrual me resulta Ok, pero me gustaría probar una diferente.",
+        "label": "Mi copa menstrual está bien, pero me gustaría probar una diferente.",
         "value": "okTryNew",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       }

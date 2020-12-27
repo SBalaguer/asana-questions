@@ -35,7 +35,7 @@ const pointsSchema = [
         points: ['rectaS', 'rectaL', 'curvaL','curvaS'], 
         exclude: [] 
       },
-      'Mi copa menstrual me resulta bien, pero me gustaría probar una diferente.': {
+      'Mi copa menstrual está bien, pero me gustaría probar una diferente.': {
         points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
         exclude: []
       }
@@ -61,7 +61,7 @@ const pointsSchema = [
         exclude: []
       },
       'Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)': {
-        points: ['rectaS', 'rectaL', 'curvaS', 'curvaL'],
+        points: ['rectaS', 'rectaL','curvaS', 'curvaL'],
         exclude: []
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
@@ -82,7 +82,7 @@ const pointsSchema = [
         exclude: []
       },
       'Trato de hacer deporte 1 vez por semana.': {
-        points: ['rectaS', 'curvaS', 'curvaL', 'rectaL'],
+        points: ['curvaS', 'curvaL', 'rectaS', 'rectaL'],
         exclude: []
       },
       'Soy deportista, o hago actividad física más de 2 veces por semana.': {
