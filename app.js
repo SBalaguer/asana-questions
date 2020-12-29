@@ -14,7 +14,7 @@ const app = express();
 app.set('trust proxy', 1);
 app.set('views', path.join(__dirname, 'views'));
 
-const whitelist = ['https://test.asanacup.com/', process.env.FRONT_END_URL];
+const whitelist = ['https://test.asanacup.com', process.env.FRONT_END_URL];
 
 app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
 app.use(logger('dev'));
