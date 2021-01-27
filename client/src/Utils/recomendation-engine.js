@@ -8,7 +8,8 @@ const recomendationEngine = (answers) => {
     rectaS: 0,
     rectaL: 0,
     curvaS: 0,
-    curvaL: 0
+    curvaL: 0,
+    mini: 0
   };
 
   for (const _answer of answers) {

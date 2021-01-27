@@ -43,7 +43,7 @@ export default function Summary(props) {
           name="phone"
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
-          placeholder="Teléfono (con cod. área, sin el '15')"
+          placeholder="Teléfono (sin el '0' ni '15')"
           autoComplete="off"
         />
         {(!props.error &&

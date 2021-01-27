@@ -1,5 +1,22 @@
 const pointsSchema = [
   {
+    question: '¿Cuántos años tenés?',
+    answers: {
+      'Menos de 15 años': { 
+        points: ['mini'], 
+        exclude: ['rectaL', 'curvaL','rectaS', 'curvaS'] },
+      '15 a 24 años': { 
+        points: [], 
+        exclude: [] },
+      '25 a 35 años': { 
+        points: [], 
+        exclude: [] },
+      '36 años o más': { 
+        points: [], 
+        exclude: [] }
+    }
+  },
+  {
     question: '¿Tuviste partos?',
     answers: {
       'No tuve partos': { 
