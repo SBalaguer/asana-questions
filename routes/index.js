@@ -5,6 +5,7 @@ const { Router } = require('express');
 const router = new Router();
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
+const telFunct = require('../helpers/phone-check');
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -29,12 +30,10 @@ router.get('/answers', (req, res, next) => {
 router.post('/answers', async (req, res, next) => {
   const { answers, reco } = req.body;
   const { email, name, phone } = req.body.userInfo;
-  // console.log(name);
-  console.log(phone);
-  // console.log(req.body);
-  // console.log(reco);
+  const phoneData = telFunct.telefono(phone);
+  const workingPhone = phoneData ? phoneData.area_code + phoneData.number : phone;
   try {
-    await Answers.create({ email, name, phone, answers, reco: reco.name });
+    await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
     const sendName = name.trim().split(' ')[0];
     const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
     if (phone && phone.length >= 8 && phone.length <= 11) {
@@ -47,7 +46,7 @@ router.post('/answers', async (req, res, next) => {
           name: sendNameCapital,
           answers,
           reco,
-          phone
+          phone: phoneData ? phoneData.area_code + phoneData.number : ""
         }
       });
     } else {
@@ -60,7 +59,7 @@ router.post('/answers', async (req, res, next) => {
           name: sendNameCapital,
           answers,
           reco,
-          phone
+          phone: phoneData ? phoneData.area_code + phoneData.number : ""
         }
       });
     }

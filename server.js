@@ -67,6 +67,7 @@ mongoose
     initiate();
   })
   .catch(error => {
+    console.log(error)
     console.error(`There was an error connecting the database to URI "${ URI }"`);
     debug(error);
     process.exit(1);
