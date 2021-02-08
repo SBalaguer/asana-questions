@@ -79,7 +79,8 @@ function App() {
         }
       }
     } catch (error) {
-      setError(true);
+      setQuestion('result');
+      //setError(true);
     }
   };
 
