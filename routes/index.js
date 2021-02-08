@@ -36,7 +36,7 @@ router.post('/answers', async (req, res, next) => {
     await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
     const sendName = name.trim().split(' ')[0];
     const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
-    if (phone && phone.length >= 8 && phone.length <= 11) {
+    if (!phoneData.length) {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
         to: email,
