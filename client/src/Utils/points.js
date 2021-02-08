@@ -37,7 +37,8 @@ const pointsSchema = [
     question: '¿Cuál es tu experiencia con la copa menstrual?',
     answers: {
       'Nunca usé una copa menstrual.': {
-        points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
+        points: ['rectaS', 'curvaS','rectaL'],
+        //saqué curvaL
         exclude: []
       },
       'La copa me parece larga para mí, o tuve que cortarle el tallo.': {
@@ -49,11 +50,13 @@ const pointsSchema = [
         exclude: ['curvaS','curvaL']
       },
       'Me cuesta que la copa se abra totalmente.': { 
-        points: ['rectaS', 'rectaL', 'curvaL','curvaS'], 
+        points: ['rectaS', 'rectaL','curvaS'],
+        //saqué curvaL 
         exclude: [] 
       },
       'Mi copa menstrual está bien, pero me gustaría probar una diferente.': {
-        points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
+        points: ['rectaS', 'curvaS', 'rectaL'],
+        //saqué curvaL
         exclude: []
       }
     }
@@ -65,7 +68,8 @@ const pointsSchema = [
         points: ['rectaS','rectaL'], 
         exclude: [] },
       "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
-        points: ['curvaS', 'curvaL'],
+        points: ['curvaS', 'rectaL'],
+        //cambie por rectaL, antes curvaL
         exclude: []
       }
     }
@@ -82,11 +86,13 @@ const pointsSchema = [
         exclude: []
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
-        points: ['curvaS', 'curvaL'],
+        points: ['curvaS', 'rectaL'],
+        //saqué curvaL
         exclude: []
       },
       'No tengo idea. Prefiero no verificarlo.': {
-        points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
+        points: ['rectaS', 'curvaS', 'rectaL'],
+        //saqué curvaL
         exclude: []
       }
     }
@@ -95,11 +101,13 @@ const pointsSchema = [
     question: '¿Cómo te llevás con el deporte?',
     answers: {
       'No me gusta mucho el deporte.': {
-        points: ['rectaS', 'curvaS', 'curvaL','rectaL'],
+        points: ['rectaS', 'curvaS', 'rectaL'],
+        //saqué curvaL
         exclude: []
       },
       'Trato de hacer deporte 1 vez por semana.': {
-        points: ['curvaS', 'curvaL', 'rectaS', 'rectaL'],
+        points: ['curvaS', 'rectaS', 'rectaL'],
+        //saqué curvaL
         exclude: []
       },
       'Soy deportista, o hago actividad física más de 2 veces por semana.': {
