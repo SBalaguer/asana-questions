@@ -37,8 +37,7 @@ const pointsSchema = [
     question: '¿Cuál es tu experiencia con la copa menstrual?',
     answers: {
       'Nunca usé una copa menstrual.': {
-        points: ['rectaS', 'curvaS','rectaL'],
-        //saqué curvaL
+        points: ['rectaS', 'curvaS','rectaL','curvaL'],
         exclude: []
       },
       'La copa me parece larga para mí, o tuve que cortarle el tallo.': {
@@ -47,16 +46,14 @@ const pointsSchema = [
       },
       'La copa me es difícil de agarrar o extraer.': {
         points: ['rectaS', 'rectaL'],
-        exclude: ['curvaS','curvaL']
       },
       'Me cuesta que la copa se abra totalmente.': { 
-        points: ['rectaS', 'rectaL','curvaS'],
-        //saqué curvaL 
+        points: ['rectaS', 'rectaL','curvaS','curvaL'],
         exclude: [] 
       },
       'Mi copa menstrual está bien, pero me gustaría probar una diferente.': {
-        points: ['rectaS', 'curvaS', 'rectaL'],
-        //saqué curvaL
+        points: ['curvaS','curvaL'],
+        //saque las rectas
         exclude: []
       }
     }
@@ -68,8 +65,7 @@ const pointsSchema = [
         points: ['rectaS','rectaL'], 
         exclude: [] },
       "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
-        points: ['curvaS', 'rectaL'],
-        //cambie por rectaL, antes curvaL
+        points: ['curvaS','curvaL'],
         exclude: []
       }
     }
@@ -86,13 +82,11 @@ const pointsSchema = [
         exclude: []
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
-        points: ['curvaS', 'rectaL'],
-        //saqué curvaL
+        points: ['curvaS','curvaL','mini'],
         exclude: []
       },
       'No tengo idea. Prefiero no verificarlo.': {
-        points: ['rectaS', 'curvaS', 'rectaL'],
-        //saqué curvaL
+        points: ['rectaS', 'curvaS', 'rectaL','curvaL'],
         exclude: []
       }
     }
@@ -101,13 +95,11 @@ const pointsSchema = [
     question: '¿Cómo te llevás con el deporte?',
     answers: {
       'No me gusta mucho el deporte.': {
-        points: ['rectaS', 'curvaS', 'rectaL'],
-        //saqué curvaL
+        points: ['rectaS', 'curvaS', 'rectaL','curvaL'],
         exclude: []
       },
       'Trato de hacer deporte 1 vez por semana.': {
-        points: ['curvaS', 'rectaS', 'rectaL'],
-        //saqué curvaL
+        points: ['curvaS', 'rectaS','curvaL'],
         exclude: []
       },
       'Soy deportista, o hago actividad física más de 2 veces por semana.': {
