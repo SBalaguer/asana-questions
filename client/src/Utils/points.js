@@ -52,8 +52,7 @@ const pointsSchema = [
         exclude: [] 
       },
       'Mi copa menstrual está bien, pero me gustaría probar una diferente.': {
-        points: ['curvaS','curvaL'],
-        //saque las rectas
+        points: ['curvaS','curvaL','rectaS', 'rectaL'],
         exclude: []
       }
     }
@@ -99,12 +98,12 @@ const pointsSchema = [
         exclude: []
       },
       'Trato de hacer deporte 1 vez por semana.': {
-        points: ['curvaS', 'rectaS','curvaL'],
+        points: ['curvaS', 'curvaL'],
         exclude: []
       },
       'Soy deportista, o hago actividad física más de 2 veces por semana.': {
         points: ['curvaS', 'curvaL'],
-        exclude: []
+        exclude: ['rectaS','rectaL',]
       }
     }
   }
