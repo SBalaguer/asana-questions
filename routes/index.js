@@ -30,13 +30,24 @@ router.get('/answers', (req, res, next) => {
 router.post('/answers', async (req, res, next) => {
   const { answers, reco } = req.body;
   const { email, name, phone } = req.body.userInfo;
-  const phoneData = telFunct.telefono(phone);
+  //Phone comes as string.
+  let usePhone;
+  if (phone.toString().charAt(0)==="1" && phone.toString().charAt(1)==="5") {
+    usePhone = phone.toString().split("");
+    usePhone[1]="1";
+    usePhone = usePhone.join("");
+  } else {
+    usePhone = phone;
+  }
+
+  const phoneData = telFunct.telefono(usePhone);
   const workingPhone = phoneData ? phoneData.area_code + phoneData.number : phone;
   try {
-    await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
+    const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
+    console.log(a)
     const sendName = name.trim().split(' ')[0];
     const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
-    if (!phoneData.length) {
+    if (phoneData) {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
         to: email,

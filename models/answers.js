@@ -29,7 +29,7 @@ const schema = new mongoose.Schema(
       required: true
     }
   },
-  { timestamps: true }
+  { timestamps: { createdAt: 'created_at' } }
 );
 
 module.exports = mongoose.model('Answers', schema);
