@@ -61,7 +61,7 @@ const pointsSchema = [
     question: 'Prefiero tener una copa menstrual que sea, por sobre todo...',
     answers: {
       'Más fácil de colocar y extraer de mi cuerpo': { 
-        points: ['rectaS','rectaL'], 
+        points: ['rectaS','rectaL','curvaS','curvaL', 
         exclude: [] },
       "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
         points: ['curvaS','curvaL'],
