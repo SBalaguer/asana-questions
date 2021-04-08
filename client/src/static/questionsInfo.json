@@ -74,25 +74,25 @@
       {
         "label": "Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)",
         "value": "tall",
-        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726714/Asana/Asana-Alto_g6erj3.png",
+        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/alto.png?v=1617917232",
         "points": ["rectaS", "rectaL"]
       },
       {
         "label": "Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)",
         "value": "medium",
-        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726713/Asana/Asana-Medio_wntawi.png",
+        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/medio.png?v=1617917232",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       },
       {
         "label": "Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)",
         "value": "small",
-        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726711/Asana/Asana-Bajo_yu7bb5.png",
+        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/bajo.png?v=1617917232",
         "points": ["curvaS", "curvaL"]
       },
       {
         "label": "No tengo idea. Prefiero no verificarlo.",
         "value": "noIdea",
-        "image": "https://res.cloudinary.com/dcnzfzgxm/image/upload/v1599726711/Asana/Asana-NoSabe_zgcrzu.png",
+        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/noIdea.png?v=1617917232",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
       }
     ]
