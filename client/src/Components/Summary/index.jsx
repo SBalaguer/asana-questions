@@ -9,12 +9,6 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      {/* <h3>Listo! Estas son tus respuestas:</h3>
-      <ul>
-        {props.answers.map((answer) => (
-          <SummaryAnswer key={answer.question} {...answer} />
-        ))}
-      </ul> */}
       <h3>Dejanos tus datos así te enviamos los resultados. </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
