@@ -6,6 +6,7 @@ const createError = require('http-errors');
 const logger = require('morgan');
 const serveFavicon = require('serve-favicon');
 const indexRouter = require('./routes/index');
+const customerRouter = require('./routes/customers');
 const cors = require('cors');
 const path = require('path');
 
@@ -47,6 +48,7 @@ app.use(
 // );
 
 app.use('/', indexRouter);
+app.use('/customers', customerRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {

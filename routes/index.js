@@ -43,38 +43,39 @@ router.post('/answers', async (req, res, next) => {
   const phoneData = telFunct.telefono(usePhone);
   const workingPhone = phoneData ? phoneData.area_code + phoneData.number : phone;
   try {
-    const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
-    console.log(a)
-    const sendName = name.trim().split(' ')[0];
-    const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
-    if (phoneData) {
-      await transporter.sendMail({
-        from: `Asana Copa Menstrual <${process.env.MAIL}>`,
-        to: email,
-        subject: 'La copita perfecta para vos + Envío Gratis',
-        template: 'main',
-        context: {
-          name: sendNameCapital,
-          answers,
-          reco,
-          phone: phoneData ? phoneData.area_code + phoneData.number : ""
-        }
-      });
-    } else {
-      await transporter.sendMail({
-        from: `Asana Copa Menstrual <${process.env.MAIL}>`,
-        to: email,
-        subject: 'La copita ideal para vos + Envío Gratis',
-        template: 'main',
-        context: {
-          name: sendNameCapital,
-          answers,
-          reco,
-          phone: phoneData ? phoneData.area_code + phoneData.number : ""
-        }
-      });
-    }
-    res.json({ success: true });
+    // const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
+    // // console.log('running');
+    // const sendName = name.trim().split(' ')[0];
+    // const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
+    // if (phoneData) {
+    //   await transporter.sendMail({
+    //     from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+    //     to: email,
+    //     subject: 'La copita perfecta para vos + Envío Gratis',
+    //     template: 'main',
+    //     context: {
+    //       name: sendNameCapital,
+    //       answers,
+    //       reco,
+    //       phone: phoneData ? phoneData.area_code + phoneData.number : ""
+    //     }
+    //   });
+    // } else {
+    //   await transporter.sendMail({
+    //     from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+    //     to: email,
+    //     subject: 'La copita ideal para vos + Envío Gratis',
+    //     template: 'main',
+    //     context: {
+    //       name: sendNameCapital,
+    //       answers,
+    //       reco,
+    //       phone: phoneData ? phoneData.area_code + phoneData.number : ""
+    //     }
+    //   });
+    // }
+    // res.json({ success: true });
+    res.redirect(`http://localhost:5000/customers/getCustomer?email=${email}&phone=${phoneData}`);
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }
