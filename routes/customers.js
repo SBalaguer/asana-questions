@@ -8,13 +8,19 @@ const axios = require('axios');
 router.get('/getCustomer', async (req, res, next) => {
     const email = req.query.email;
     const phone = req.query.phone;
+    const name = req.query.name;
+    const reco = req.query.reco;
+    const answers = JSON.parse(req.query.answers);
+    // console.log("email",email);
+    // console.log("phone",phone);
+    // console.log("name",name);
+    // console.log("reco",reco);
+    // console.log("answers",answers);
     let id;
     try {
         const user = await axios.get(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/search.json?query=email:${email}&fields=email,id`);
         if (user.data.customers.length) {
-            console.log("if fue true");
             id = user.data.customers[0].id;
-            console.log(id);
             const response = await axios.put(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/${id}.json`,{
                 "customer": {
                     "id": id,
@@ -25,13 +31,16 @@ router.get('/getCustomer', async (req, res, next) => {
         } else {
             const response = await axios.post(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers.json`,{
                 "customer": {
-                    "first_name": "Copitaaahhh",
+                    "first_name": name,
                     "email": email,
+                    "reco": reco,
+                    "answers":answers,
                     "tags":"TOM"
                   }                 
             });
             res.json({success:true, type: "update" ,user:user.data.customers });
         }
+        res.json({success:true});
     } catch (error) {
         res.json({ success: false, error: { message: error.message } }).status(500);
     }

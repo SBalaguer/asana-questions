@@ -22,7 +22,9 @@ function App() {
     const name = event.target.name;
     const value = event.target.value;
     const questionExists = !![...answers].find((_answer) => _answer.question === name);
+    //search for tags
     if (questionExists) {
+      //question was not answered before
       const newAnswers = [...answers].map((_answer) => {
         if (_answer.question === name) {
           _answer.answer = value;
@@ -31,6 +33,7 @@ function App() {
       });
       setAnswers(newAnswers);
     } else {
+      //question was answered before
       setAnswers([...answers, { question: name, answer: value }]);
     }
   };

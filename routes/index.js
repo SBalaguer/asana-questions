@@ -75,7 +75,7 @@ router.post('/answers', async (req, res, next) => {
     //   });
     // }
     // res.json({ success: true });
-    res.redirect(`http://localhost:5000/customers/getCustomer?email=${email}&phone=${phoneData}`);
+    res.redirect(`http://localhost:5000/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco}&answers=${JSON.stringify(answers)}`);
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }

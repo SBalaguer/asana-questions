@@ -2,22 +2,23 @@
   "age": {
     "title": "¿Cuántos años tenés?",
     "options": [
-      { "label": "Menos de 15 años", "value": "less18" },
-      { "label": "15 a 24 años", "value": "18-24" },
-      { "label": "25 a 35 años", "value": "25-35" },
-      { "label": "36 años o más", "value": "36More" }
+      { "label": "Menos de 15 años", "value": "less18", "tags":"<15años"},
+      { "label": "15 a 24 años", "value": "18-24", "tags":"15-18años"},
+      { "label": "25 a 35 años", "value": "25-35", "tags":"25-35años"},
+      { "label": "36 años o más", "value": "36More", "tags":"+36años" }
     ]
   },
   "births": {
     "title": "¿Tuviste partos?",
     "options": [
-      { "label": "No tuve partos", "value": "no", "points": ["rectaS", "curvaS"] },
-      { "label": "Sí, tuve parto natural", "value": "natural", "points": ["rectaL", "curvaL"] },
-      { "label": "Sí, tuve parto por cesárea", "value": "surgery", "points": ["rectaS", "curvaS"] },
+      { "label": "No tuve partos", "value": "no", "points": ["rectaS", "curvaS"], "tags":"SinPartos"  },
+      { "label": "Sí, tuve parto natural", "value": "natural", "points": ["rectaL", "curvaL"], "tags":"PartoNatural"  },
+      { "label": "Sí, tuve parto por cesárea", "value": "surgery", "points": ["rectaS", "curvaS"], "tags":"Cesárea"  },
       {
         "label": "Sí, tuve parto por cesárea y natural",
         "value": "naturalSurgery",
-        "points": ["rectaL", "curvaL"]
+        "points": ["rectaL", "curvaL"],
+        "tags":"CesareaYNatural"
       }
     ]
   },
@@ -27,28 +28,33 @@
       {
         "label": "Nunca usé una copa menstrual.",
         "value": "notUse",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"NuncaUsoCopa" 
       },
       {
         "label": "La copa me parece larga para mí, o tuve que cortarle el tallo.",
         "value": "long",
-        "points": ["curvaS", "curvaL"]
+        "points": ["curvaS", "curvaL"], 
+        "tags":"UsoCopaMuyLarga" 
       },
       {
         "label": "La copa me es difícil de agarrar o extraer.",
         "value": "diffcultUse",
         "points": ["rectaS", "rectaL"],
-        "exclude": ["curvaS", "curvaL"]
+        "exclude": ["curvaS", "curvaL"], 
+        "tags":"UsoCopaDificilAgarrar" 
       },
       {
-        "label": "Me cuesta que la copa se abra totalmente.",
+        "label": "La copa me pierde o cuesta que se abra totalmente.",
         "value": "doesNotOpen",
-        "points": ["rectaS", "rectaL"]
+        "points": ["rectaS", "rectaL"], 
+        "tags":"UsoCopaPerdidaONoAbre" 
       },
       {
         "label": "Mi copa menstrual está bien, pero me gustaría probar una diferente.",
         "value": "okTryNew",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"UsoCopaQuiereDiferente" 
       }
     ]
   },
@@ -58,12 +64,14 @@
       {
         "label": "Más fácil de colocar y extraer de mi cuerpo",
         "value": "easy",
-        "points": ["rectaS", "rectaL"]
+        "points": ["rectaS", "rectaL"], 
+        "tags":"PrefiereFacil" 
       },
       {
         "label": "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer",
         "value": "hard",
-        "points": ["curvaS", "curvaL"]
+        "points": ["curvaS", "curvaL"], 
+        "tags":"PrefiereComoda" 
       }
     ]
   },
@@ -75,25 +83,29 @@
         "label": "Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)",
         "value": "tall",
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/alto.png?v=1617917232",
-        "points": ["rectaS", "rectaL"]
+        "points": ["rectaS", "rectaL"], 
+        "tags":"CervixAlto" 
       },
       {
         "label": "Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)",
         "value": "medium",
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/medio.png?v=1617917232",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"CervixMedio" 
       },
       {
         "label": "Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)",
         "value": "small",
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/bajo.png?v=1617917232",
-        "points": ["curvaS", "curvaL"]
+        "points": ["curvaS", "curvaL"], 
+        "tags":"CervixBajo" 
       },
       {
         "label": "No tengo idea. Prefiero no verificarlo.",
         "value": "noIdea",
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/noIdea.png?v=1617917232",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"CervixNoInfo" 
       }
     ]
   },
@@ -103,27 +115,32 @@
       {
         "label": "Ecología: Evitar hasta 150kg de plástico que genero con toallitas y tampones.",
         "value": "eco",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"InteresEcologia" 
       },
       {
         "label": "Salud: Usar un método más natural, sin químicos que interactúen con mi cuerpo.",
         "value": "health",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"InteresSalud" 
       },
       {
         "label": "Confort: Sentirme más cómoda con mis períodos.",
         "value": "confort",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"InteresConfort" 
       },
       {
         "label": "Economía: Ahorrar los ~$2700 por año que gasto en toallitas y/o tampones.",
         "value": "economy",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"InteresAhorro" 
       },
       {
         "label": "Otro",
         "value": "other",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"InteresOtro" 
       }
     ]
   },
@@ -133,17 +150,20 @@
       {
         "label": "No me gusta mucho el deporte.",
         "value": "none",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"DeporteNo" 
       },
       {
         "label": "Trato de hacer deporte 1 vez por semana.",
         "value": "low",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"]
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"DeportePoco" 
       },
       {
         "label": "Soy deportista, o hago actividad física más de 2 veces por semana.",
         "value": "high",
-        "points": ["curvaS", "curvaL"]
+        "points": ["curvaS", "curvaL"], 
+        "tags":"DeporteAlto"
       }
     ]
   }
