@@ -9,7 +9,7 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      <h3>Dejanos tus datos así te enviamos los resultados. </h3>
+      <h3>Dejanos tus datos así te enviamos el resultado y un regalito 🎁 exclusivo!</h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -37,12 +37,12 @@ export default function Summary(props) {
           name="phone"
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
-          placeholder="Teléfono (sin el '0' ni '15')"
+          placeholder="Teléfono (sin '0' ni '15')"
           autoComplete="off"
         />
         {(!props.error &&
           ((props.loading && <button disabled>Calculando...</button>) || (
-            <button>VER SUGERENCIA</button>
+            <button class="view-result">VER SUGERENCIA</button>
           ))) ||
           null}
       </form>

@@ -14,8 +14,20 @@
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:#22a7a5;
   opacity: 1; /* Firefox */
+  font-weight: 500;
 }
-
+.view-result{
+  border: 0px solid transparent;
+  background-color: #04b5c7;
+  padding: 12px;
+  font-size: 1.5em;
+  margin: 2em;
+  font-weight: 600;
+  color: #FFF;
+  font-family: 'Montserrat',sans-serif;
+  width: 100%;
+  border-radius: 34px
+}
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #22a7a5;

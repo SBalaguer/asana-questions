@@ -116,7 +116,7 @@
 
     <style>
 
-      	    .primary{
+      .primary{
       	background: #30e3ca;
       }
       .bg_white{
@@ -141,9 +141,23 @@
       	display: inline-block;
       }
       .btn.btn-primary{
-      	border-radius: 5px;
-      	background: #be89cf;
-      	color: #ffffff;
+        font-weight: 600;
+        padding: 10px 15px;
+        display: inline-block;
+        border-radius: 5px;
+        background: #fff;
+        border: 3px #b140a0 dashed;
+        color: #b140a0;
+        font-size: 21px;
+      }
+      .btn-secondary{
+        padding: 10px 15px;
+        font-weight: 800;
+        display: inline-block;
+        border-radius: 40px;
+        border: solid 3px #25d366;
+        background: #25d366;
+        color: #fff;
       }
       .btn.btn-white{
       	border-radius: 5px;
@@ -165,20 +179,21 @@
       }
 
       h1,h2,h3,h4,h5,h6{
-      	font-family: Montserrat,sans-serif;
       	color: #000000;
       	margin-top: 0;
       	font-weight: 400;
       }
 
       body{
-      	font-family: Montserrat,sans-serif;
       	font-weight: 400;
       	font-size: 15px;
       	line-height: 1.8;
       	color: white;
       }
-
+      body,h1,h2,h3,h4,h5,.btn,p,a{
+        font-family: 'Montserrat',sans-serif;
+      }
+      
       a{
       	color: #be89cf;
       }
@@ -194,7 +209,6 @@
       	color: #30e3ca;
       	font-size: 24px;
       	font-weight: 700;
-      	font-family: Montserrat,sans-serif;
       }
 
       /*HERO*/
@@ -258,7 +272,6 @@
       	color: rgba(255,255,255,.8);
       }
       .heading-section-white h2{
-      	font-family: Montserrat,sans-serif;
       	line-height: 1;
       	padding-bottom: 0;
       }
@@ -273,8 +286,12 @@
       	letter-spacing: 2px;
       	color: rgba(255,255,255,.4);
       }
-
-
+      .img-prod{
+        width: 200px; 
+        height: auto; 
+        margin: auto; 
+        display: block;
+      }
       ul.social{
       	padding: 0;
       }
@@ -282,7 +299,17 @@
       	display: inline-block;
       	margin-right: 10px;
       }
-
+      .cta-p{
+        font-size:18px; 
+        font-weight: 500; 
+        color:#b140a0; 
+        margin:0 auto -8px auto; 
+        width:70%;
+      }
+       .cta-span{
+        font-weight: bolder;
+        text-decoration: underline;
+       }
       /*FOOTER*/
 
       .footer{
@@ -305,20 +332,15 @@
       	color: rgba(0,0,0,1);
       }
 
-
-      @media screen and (max-width: 500px) {
-
-
-      }
     </style>
   </head>
   <body
     width="100%"
-    style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;"
+    style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;"
   >
-    <center style="width: 100%; background-color: #f1f1f1;">
+    <center style="width: 100%; background-color: #fff;">
       <div
-        style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: Montserrat,sans-serif;"
+        style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: 'Montserrat',sans-serif;"
       >
         &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
       </div>
@@ -354,8 +376,8 @@
               <table>
                 <tr>
                   <td>
-                    <div class="text" style="padding: 0 2.5em; text-align: center;">
-                      <h4 style="margin:0; padding:0">Esta es la copa menstrual que te sugerimos probar!</h4>
+                    <div class="text" style="padding: 0; text-align: center;">
+                      <h4 style="margin:0; padding:0 2em">La copa menstrual que te sugerimos probar es:</h4>
                       <h2>{{reco.name}}</h2>
                     </div>
                   </td>
@@ -364,12 +386,12 @@
             </td>
           </tr>
           <tr>
-            <td valign="middle" class="hero bg_white" style="padding: 0em 0 0em 0;">
+            <td valign="middle" class="hero bg_white">
               <a href="{{reco.linkToBuy}}">
               <img
                 src="{{reco.image}}"
                 alt=""
-                style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;"
+                class="img-prod"
               /></a>
             </td>
           </tr>
@@ -379,13 +401,12 @@
                 <tr>
                   <td>
                     <div class="text" style="padding: 0 2.5em; text-align: center;">
-                      <h4 style="font-size:18px; font-weight: 300;">{{reco.description}}</h4>
-                      <p style="font-size:18px; font-weight: 600; color:#b140a0; margin-bottom:-8px; font-family:'Montserrat',sans-serif;">Aprovechá ahora y te la enviamos gratis a tu casa!</p>
-                      <p><a href="{{reco.linkToBuy}}" style="font-weight: 600; padding: 10px 15px; display: inline-block; border-radius: 5px; background: #be89cf; color: #ffffff;" class="btn btn-primary">CONSEGUILA ACÁ</a></p>
-                      {{!-- <p style="font-size:18px; font-weight: 600; color: #22a7a5; margin-bottom:-8px; font-family:'Montserrat',sans-serif;">Promo Duo: $1,119 c/u</p>
-                      <p><a href="{{reco.linkToBuyDuo}}" style="font-weight: 600; padding: 10px 15px; display: inline-block; border-radius: 5px; background: #22a7a5; color: #ffffff;" class="btn btn-primary">COMPRAR PROMO DUO</a></p> --}}
-                      <h3 style="font-size:14px;">¿Tenés dudas? Escribinos por Whatsapp y te ayudamos.</h3>
-                      <p><a href="http://api.whatsapp.com/send?phone=+541162532264" style="padding: 10px 15px; font-weight:bold; display: inline-block; border-radius: 5px; border:solid 3px #25D366; background: #ffffff; color: #25D366;" class="btn btn-primary">INICIAR CHAT</a></p> 
+                      <h4 style="font-size:14px; font-weight: 300;">{{reco.description}}</h4>
+                      <p class="cta-p" style="margin:auto;">Usá tu <span class="cta-span">descuento válido por las próximas 24hs</span> + ENVÍO GRATIS a todo el país!</p>
+                      <h3 style="font-size:14px;">Hacé click sobre tu código 👇</h3>
+                      <p><a href="https://asanacup.com/discount/24HWL4U7?redirect={{reco.linkRedirect}}" class="btn btn-primary">Código: 24HWL4U7</a></p>
+                      <h3 style="font-size:14px;">Ó hacé tu pedido directamente por Whatsapp 📲</h3>
+                      <p><a href="https://api.whatsapp.com/send?phone=+5491162532264&text=Hola%21%20Hice%20el%20test%20y%20me%20gustar%C3%ADa%20usar%20mi%20c%C3%B3digo%20de%20descuento%20%2A24HWL4U7%2A%20para%20probar%20el%20modelo%20{{reco.name}}%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F" class="btn btn-secondary" style="color: #fff !important;">HACER PEDIDO</a></p>
                     </div>
                   </td>
                 </tr>
@@ -397,23 +418,15 @@
                         Recordá que la sugerencia de este test no es absoluta y pueden haber otros
                         talles y modelos que también resulten bien para tu caso.
                       </p>
+                      <p style="font-size: small;">
+                        (*) Descuento no acumulable con otros descuentos y/o promociones. Asana se reserva el derecho a dar de baja el descuento pasadas las 24hs.
+                      </p>
                     </div>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
-        </table>
-
-        <table
-          align="center"
-          role="presentation"
-          cellspacing="0"
-          cellpadding="0"
-          border="0"
-          width="100%"
-          style="margin: auto;"
-        >
           <tr>
             <td class="bg_light" style="text-align: center;">
               <p>Hecho con <span>💜</span> por el equipo de Asana
@@ -424,6 +437,7 @@
             </td>
           </tr>
         </table>
+
       </div>
     </center>
   </body>
