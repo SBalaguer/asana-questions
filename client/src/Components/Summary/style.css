@@ -26,7 +26,8 @@
   color: #FFF;
   font-family: 'Montserrat',sans-serif;
   width: 100%;
-  border-radius: 34px
+  border-radius: 34px;
+  max-width:252px;
 }
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
