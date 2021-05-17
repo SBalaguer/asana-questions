@@ -9,7 +9,7 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      <h3>Dejanos tus datos así te enviamos el resultado!</h3>
+      <h3>Te enviaremos el resultado y un regalito especial 🎁</h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
