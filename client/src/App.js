@@ -102,7 +102,7 @@ function App() {
         <div className="container">
           <h3 className="title">
             El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos.
-            ¿Estás lista?
+            ¿Empezamos?
           </h3>
           <button onClick={() => handleNextQuestion(0)}>INICIAR</button>
         </div>
