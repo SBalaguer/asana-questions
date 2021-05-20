@@ -51,7 +51,7 @@ router.post('/answers', async (req, res, next) => {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
         to: email,
-        subject: 'Tu copa ideal y un descuento par vos',
+        subject: 'Tu modelo ideal y un regalito 🎁 para vos',
         template: 'main',
         context: {
           name: sendNameCapital,
@@ -64,7 +64,7 @@ router.post('/answers', async (req, res, next) => {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
         to: email,
-        subject: 'Tu copita ideal y un descuento para vos',
+        subject: 'Te dejamos un regalito 🎁 para vos',
         template: 'main',
         context: {
           name: sendNameCapital,
