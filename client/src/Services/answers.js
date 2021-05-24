@@ -10,7 +10,6 @@ const api = axios.create({
 });
 
 export const sendAnswers = async (body) => {
-  console.log(api)
   let response;
   try {
     response = await api.post('/answers', body);

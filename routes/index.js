@@ -28,7 +28,6 @@ router.get('/answers', (req, res, next) => {
 });
 
 router.post('/answers', async (req, res, next) => {
-  console.log("body", req.body);
   const { answers, reco } = req.body;
   const { email, name, phone, info } = req.body.userInfo;
   //Phone comes as string.
