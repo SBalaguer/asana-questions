@@ -13,28 +13,31 @@ import linksToBuy from './static/linksToBuy.json';
 function App() {
   const [question, setQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState({info: true});
   const [reco, setReco] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event, questionName) => {
     const name = event.target.name;
     const value = event.target.value;
-    const questionExists = !![...answers].find((_answer) => _answer.question === name);
-    //search for tags
+    const questionExists = !![...answers].find((_answer) => _answer.
+    question === name);
+    const tag = listOfQuestions[questionName].options.find(option => option.label === value).tags;
+    
     if (questionExists) {
       //question was not answered before
       const newAnswers = [...answers].map((_answer) => {
         if (_answer.question === name) {
           _answer.answer = value;
+          _answer.tag = tag;
         }
         return _answer;
       });
       setAnswers(newAnswers);
     } else {
       //question was answered before
-      setAnswers([...answers, { question: name, answer: value }]);
+      setAnswers([...answers, { question: name, answer: value, tag}]);
     }
   };
 
@@ -56,7 +59,11 @@ function App() {
         .join(' ');
     }
 
-    setUserInfo({ ...userInfo, [name]: value });
+    if (name === 'info'){
+      setUserInfo({ ...userInfo, info: !userInfo.info });
+    } else{
+      setUserInfo({ ...userInfo, [name]: value });
+    }
   };
 
   const handleSubmision = async (event) => {

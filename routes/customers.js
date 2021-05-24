@@ -11,11 +11,13 @@ router.get('/getCustomer', async (req, res, next) => {
     const name = req.query.name;
     const reco = req.query.reco;
     const answers = JSON.parse(req.query.answers);
-    // console.log("email",email);
-    // console.log("phone",phone);
-    // console.log("name",name);
-    // console.log("reco",reco);
-    // console.log("answers",answers);
+    const tags = answers.reduce((acc,val,index)=>{
+        if (index<answers.length - 1) {
+            return acc+=`${val.tag},`;
+        } else {
+            return acc+=`${val.tag}`;
+        }
+      },"");
     let id;
     try {
         const user = await axios.get(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/search.json?query=email:${email}&fields=email,id`);
@@ -24,7 +26,7 @@ router.get('/getCustomer', async (req, res, next) => {
             const response = await axios.put(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/${id}.json`,{
                 "customer": {
                     "id": id,
-                    "tags": "TestDone,CervixAlto"
+                    "tags": tags
                 }
             });
             res.json({success:true, type: "update" ,user:user.data.customers });

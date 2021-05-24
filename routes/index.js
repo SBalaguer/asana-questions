@@ -28,8 +28,9 @@ router.get('/answers', (req, res, next) => {
 });
 
 router.post('/answers', async (req, res, next) => {
+  console.log("body", req.body);
   const { answers, reco } = req.body;
-  const { email, name, phone } = req.body.userInfo;
+  const { email, name, phone, info } = req.body.userInfo;
   //Phone comes as string.
   let usePhone;
   if (phone.toString().charAt(0)==="1" && phone.toString().charAt(1)==="5") {
@@ -43,39 +44,43 @@ router.post('/answers', async (req, res, next) => {
   const phoneData = telFunct.telefono(usePhone);
   const workingPhone = phoneData ? phoneData.area_code + phoneData.number : phone;
   try {
-    // const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
-    // // console.log('running');
-    // const sendName = name.trim().split(' ')[0];
-    // const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
-    // if (phoneData) {
-    //   await transporter.sendMail({
-    //     from: `Asana Copa Menstrual <${process.env.MAIL}>`,
-    //     to: email,
-    //     subject: 'La copita perfecta para vos + Envío Gratis',
-    //     template: 'main',
-    //     context: {
-    //       name: sendNameCapital,
-    //       answers,
-    //       reco,
-    //       phone: phoneData ? phoneData.area_code + phoneData.number : ""
-    //     }
-    //   });
-    // } else {
-    //   await transporter.sendMail({
-    //     from: `Asana Copa Menstrual <${process.env.MAIL}>`,
-    //     to: email,
-    //     subject: 'La copita ideal para vos + Envío Gratis',
-    //     template: 'main',
-    //     context: {
-    //       name: sendNameCapital,
-    //       answers,
-    //       reco,
-    //       phone: phoneData ? phoneData.area_code + phoneData.number : ""
-    //     }
-    //   });
-    // }
-    // res.json({ success: true });
-    res.redirect(`http://localhost:5000/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco}&answers=${JSON.stringify(answers)}`);
+    if (info) {
+      const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
+      // console.log('running');
+      const sendName = name.trim().split(' ')[0];
+      const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
+      if (phoneData) {
+        await transporter.sendMail({
+          from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+          to: email,
+          subject: 'La copita perfecta para vos + Envío Gratis',
+          template: 'main',
+          context: {
+            name: sendNameCapital,
+            answers,
+            reco,
+            phone: phoneData ? phoneData.area_code + phoneData.number : ""
+          }
+        });
+      } else {
+        await transporter.sendMail({
+          from: `Asana Copa Menstrual <${process.env.MAIL}>`,
+          to: email,
+          subject: 'La copita ideal para vos + Envío Gratis',
+          template: 'main',
+          context: {
+            name: sendNameCapital,
+            answers,
+            reco,
+            phone: phoneData ? phoneData.area_code + phoneData.number : ""
+          }
+        });
+      }
+      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco}&answers=${JSON.stringify(answers)}`);
+    } else {
+      res.json({ success: true });
+      //aca es cuando no quieren dejar sus datos...que hacemos en ese caso?
+    }
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }

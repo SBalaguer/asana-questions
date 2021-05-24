@@ -5,14 +5,14 @@
   color: white;
   border: 0px;
   border-bottom: 1px solid white;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: transparent;
   font-size: 1.3em;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color:#22a7a5;
+  color: #22a7a5;
   opacity: 1; /* Firefox */
 }
 
@@ -28,4 +28,18 @@
 
 .user-info {
   width: 70%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  width: 100%;
+}
+
+.input-checkbox {
+  margin: 0;
+  padding: 0;
 }

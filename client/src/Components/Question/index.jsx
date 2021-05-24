@@ -11,7 +11,7 @@ export default function Question(props) {
   //options = [{label: XXX, value:YYY}]
 
   const manageSelectionChange = (event) => {
-    props.handleInputChange(event);
+    props.handleInputChange(event, props.name);
     setValue(event.target.value);
   };
 
