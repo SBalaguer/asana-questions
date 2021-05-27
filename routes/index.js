@@ -80,4 +80,18 @@ router.post('/answers', async (req, res, next) => {
   }
 });
 
+router.post('/answers-anon', async (req, res, next) => {
+  const { answers, reco } = req.body;
+
+  try {
+      const a = await Answers.create({ email:"anonymous", name:"anonymous", answers, reco: reco.name }); 
+
+      res.json({ success: true });
+  } catch (error) {
+    res.json({ success: false, error: { message: error.message } }).status(500);
+  }
+});
+
+
+
 module.exports = router;

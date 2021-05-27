@@ -7,6 +7,7 @@ import Result from './Components/Result';
 
 import listOfQuestions from './static/questionsInfo.json';
 import { sendAnswers } from './Services/answers.js';
+import { sendAnswersAnon } from './Services/answers.js';
 import recomendationEngine from './Utils/recomendation-engine';
 import linksToBuy from './static/linksToBuy.json';
 
@@ -90,6 +91,29 @@ function App() {
   };
 
   const seeResult = () => {
+    setLoading(true);
+    const reco = recomendationEngine(answers);
+    setReco(linksToBuy[reco]);
+    const info = {
+      answers,
+      reco: linksToBuy[reco]
+    };
+    try {
+      const response = await sendAnswersAnon(info);
+      if (response.success) {
+        setQuestion('result');
+      } else {
+        if (response.error.message.includes('Daily user sending quota exceeded')) {
+          setQuestion('result');
+        } else {
+          // setQuestion('result');
+          setError(true);
+        }
+      }
+    } catch (error) {
+      setQuestion('result');
+      //setError(true);
+    }
     const reco = recomendationEngine(answers);
     setReco(linksToBuy[reco]);
     setQuestion('result');
