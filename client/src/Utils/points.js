@@ -46,6 +46,7 @@ const pointsSchema = [
       },
       'La copa me es difícil de agarrar o extraer.': {
         points: ['rectaS', 'rectaL'],
+        exclude: []
       },
       'La copa me pierde o cuesta que se abra totalmente.': { 
         points: ['rectaS', 'rectaL','curvaS','curvaL'],

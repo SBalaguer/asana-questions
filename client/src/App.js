@@ -13,7 +13,7 @@ import linksToBuy from './static/linksToBuy.json';
 function App() {
   const [question, setQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
-  const [userInfo, setUserInfo] = useState({info: true});
+  const [userInfo, setUserInfo] = useState({});
   const [reco, setReco] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -58,12 +58,7 @@ function App() {
         })
         .join(' ');
     }
-
-    if (name === 'info'){
-      setUserInfo({ ...userInfo, info: !userInfo.info });
-    } else{
-      setUserInfo({ ...userInfo, [name]: value });
-    }
+    setUserInfo({ ...userInfo, [name]: value });
   };
 
   const handleSubmision = async (event) => {
@@ -93,6 +88,12 @@ function App() {
       //setError(true);
     }
   };
+
+  const seeResult = () => {
+    const reco = recomendationEngine(answers);
+    setReco(linksToBuy[reco]);
+    setQuestion('result');
+  }
 
   const handleNextQuestion = (i) => {
     if (i === 'last') {
@@ -223,6 +224,7 @@ function App() {
           listOfQuestions={listOfQuestions}
           loading={loading}
           userInfo={userInfo}
+          seeResult={seeResult}
           error={error}
         />
       );

@@ -37,12 +37,12 @@ router.get('/getCustomer', async (req, res, next) => {
                     "email": email,
                     "reco": reco,
                     "answers":answers,
-                    "tags":"TOM"
+                    "tags":tags
                   }                 
             });
             res.json({success:true, type: "update" ,user:user.data.customers });
         }
-        res.json({success:true});
+        // res.json({success:true});
     } catch (error) {
         res.json({ success: false, error: { message: error.message } }).status(500);
     }

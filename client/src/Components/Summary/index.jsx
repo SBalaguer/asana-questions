@@ -9,7 +9,7 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      <h3>Dejanos tus datos para un descuento increíble! </h3>
+      <h3>Te enviraremos el resultado y un regalito especial 🎁 </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -40,27 +40,13 @@ export default function Summary(props) {
           placeholder="Teléfono (sin el '0' ni '15')"
           autoComplete="off"
         />
-        <div className="checkbox-container">
-          <input
-          className="input-checkbox"
-          type="checkbox"
-          name="info"
-          value={!props.userInfo['info']}
-          onChange={props.handleUserInputChange}
-          title={"No quiero el descuento"}
-          autoComplete="off"
-          style={{width: "20%"}}
-          />
-          <label style={{width: "80%"}}>
-            No quiero descuentos exclusivos.
-          </label>
-        </div>
         {(!props.error &&
           ((props.loading && <button disabled>Calculando...</button>) || (
             <button>VER SUGERENCIA</button>
           ))) ||
           null}
       </form>
+      <h4 onClick={props.seeResult} style={{color:"#22a7a5", textDecoration:"underline"}}>Saltear este paso, solo ver resultado</h4>
       {props.error && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>
