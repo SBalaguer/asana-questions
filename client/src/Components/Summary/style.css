@@ -43,3 +43,25 @@
   margin: 0;
   padding: 0;
 }
+.skip-btn{
+  text-decoration: underline;
+  font-style: normal;
+  color: #22a7a5;
+  font-size: 11px;
+  text-align: center;
+  background-color: transparent
+}
+
+.view-result{
+  border: 0 solid transparent;
+  background-color: #04b5c7;
+  padding: 12px;
+  font-size: 1.5em;
+  margin: 2em;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat",sans-serif;
+  width: 100%;
+  border-radius: 34px;
+  max-width: 252px;
+}
