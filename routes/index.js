@@ -44,7 +44,6 @@ router.post('/answers', async (req, res, next) => {
   const workingPhone = phoneData ? phoneData.area_code + phoneData.number : phone;
   try {
       const a = await Answers.create({ email, name, phone: workingPhone, answers, reco: reco.name }); 
-      console.log('running');
       const sendName = name.trim().split(' ')[0];
       const sendNameCapital = sendName.charAt(0).toUpperCase() + sendName.slice(1);
       if (phoneData) {
@@ -74,7 +73,7 @@ router.post('/answers', async (req, res, next) => {
           }
         });
       }
-      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco}&answers=${JSON.stringify(answers)}`);
+      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco.name}&answers=${JSON.stringify(answers)}`);
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }

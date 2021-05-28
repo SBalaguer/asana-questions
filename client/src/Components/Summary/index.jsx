@@ -13,7 +13,6 @@ export default function Summary(props) {
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
-          required={props.userInfo['info']}
           type="text"
           name="name"
           required
@@ -24,7 +23,6 @@ export default function Summary(props) {
         />
         <input
           className="input"
-          required={props.userInfo['info']}
           type="email"
           name="email"
           required

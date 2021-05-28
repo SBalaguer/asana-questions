@@ -10,14 +10,9 @@ router.get('/getCustomer', async (req, res, next) => {
     const phone = req.query.phone;
     const name = req.query.name;
     const reco = req.query.reco;
+    console.log("reco",reco)
     const answers = JSON.parse(req.query.answers);
-    const tags = answers.reduce((acc,val,index)=>{
-        if (index<answers.length - 1) {
-            return acc+=`${val.tag},`;
-        } else {
-            return acc+=`${val.tag}`;
-        }
-      },"");
+    const tags = answers.reduce((acc,val,index)=> acc+=`${val.tag},`,"")+reco;
     let id;
     try {
         const user = await axios.get(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/search.json?query=email:${email}&fields=email,id`);
@@ -35,7 +30,6 @@ router.get('/getCustomer', async (req, res, next) => {
                 "customer": {
                     "first_name": name,
                     "email": email,
-                    "reco": reco,
                     "answers":answers,
                     "tags":tags
                   }                 
@@ -46,6 +40,7 @@ router.get('/getCustomer', async (req, res, next) => {
     } catch (error) {
         res.json({ success: false, error: { message: error.message } }).status(500);
     }
+    res.json({success:true});
   });
 
 module.exports = router;
