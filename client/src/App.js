@@ -90,7 +90,7 @@ function App() {
     }
   };
 
-  const seeResult = () => {
+  const seeResult = async () => {
     setLoading(true);
     const reco = recomendationEngine(answers);
     setReco(linksToBuy[reco]);
@@ -114,8 +114,6 @@ function App() {
       setQuestion('result');
       //setError(true);
     }
-    const reco = recomendationEngine(answers);
-    setReco(linksToBuy[reco]);
     setQuestion('result');
   }
 
