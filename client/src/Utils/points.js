@@ -64,7 +64,7 @@ const pointsSchema = [
       'Más fácil de colocar y extraer de mi cuerpo': { 
         points: ['rectaS','rectaL','curvaS','curvaL'], 
         exclude: [] },
-      "Extra comodidad, pero que requiere un poco más de 'autoconocimiento' y práctica al colocar y extraer": {
+      "Extra comodidad, aunque requiera un poco más de práctica al colocar y extraer.": {
         points: ['curvaS','curvaL'],
         exclude: []
       }
