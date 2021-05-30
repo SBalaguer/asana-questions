@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Gracias por completar el test de copa menstrual.</title>
+    <title>Gracias por hacer el test!</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
 
     <style>
@@ -116,7 +116,7 @@
 
     <style>
 
-      	    .primary{
+      .primary{
       	background: #30e3ca;
       }
       .bg_white{
@@ -141,9 +141,23 @@
       	display: inline-block;
       }
       .btn.btn-primary{
-      	border-radius: 5px;
-      	background: #be89cf;
-      	color: #ffffff;
+        font-weight: 600;
+        padding: 10px 15px;
+        display: inline-block;
+        border-radius: 5px;
+        background: #fff;
+        border: 3px #b140a0 dashed;
+        color: #b140a0;
+        font-size: 21px;
+      }
+      .btn-secondary{
+        padding: 10px 15px;
+        font-weight: 800;
+        display: inline-block;
+        border-radius: 40px;
+        border: solid 3px #25d366;
+        background: #25d366;
+        color: #fff;
       }
       .btn.btn-white{
       	border-radius: 5px;
@@ -165,20 +179,21 @@
       }
 
       h1,h2,h3,h4,h5,h6{
-      	font-family: Montserrat,sans-serif;
       	color: #000000;
       	margin-top: 0;
       	font-weight: 400;
       }
 
       body{
-      	font-family: Montserrat,sans-serif;
       	font-weight: 400;
       	font-size: 15px;
       	line-height: 1.8;
       	color: white;
       }
-
+      body,h1,h2,h3,h4,h5,.btn,p,a{
+        font-family: 'Montserrat',sans-serif;
+      }
+      
       a{
       	color: #be89cf;
       }
@@ -194,7 +209,6 @@
       	color: #30e3ca;
       	font-size: 24px;
       	font-weight: 700;
-      	font-family: Montserrat,sans-serif;
       }
 
       /*HERO*/
@@ -258,7 +272,6 @@
       	color: rgba(255,255,255,.8);
       }
       .heading-section-white h2{
-      	font-family: Montserrat,sans-serif;
       	line-height: 1;
       	padding-bottom: 0;
       }
@@ -273,8 +286,12 @@
       	letter-spacing: 2px;
       	color: rgba(255,255,255,.4);
       }
-
-
+      .img-prod{
+        width: 200px; 
+        height: auto; 
+        margin: auto; 
+        display: block;
+      }
       ul.social{
       	padding: 0;
       }
@@ -282,7 +299,17 @@
       	display: inline-block;
       	margin-right: 10px;
       }
-
+      .cta-p{
+        font-size:18px; 
+        font-weight: 500; 
+        color:#b140a0; 
+        margin:0 auto -8px auto; 
+        width:70%;
+      }
+       .cta-span{
+        font-weight: bolder;
+        text-decoration: underline;
+       }
       /*FOOTER*/
 
       .footer{
@@ -305,20 +332,15 @@
       	color: rgba(0,0,0,1);
       }
 
-
-      @media screen and (max-width: 500px) {
-
-
-      }
     </style>
   </head>
   <body
     width="100%"
-    style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;"
+    style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;"
   >
-    <center style="width: 100%; background-color: #f1f1f1;">
+    <center style="width: 100%; background-color: #fff;">
       <div
-        style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: Montserrat,sans-serif;"
+        style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: 'Montserrat',sans-serif;"
       >
         &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
       </div>
@@ -354,8 +376,8 @@
               <table>
                 <tr>
                   <td>
-                    <div class="text" style="padding: 0 2.5em; text-align: center;">
-                      <h4 style="margin:0; padding:0">Esta es la copa menstrual que te sugerimos probar!</h4>
+                    <div class="text" style="padding: 0; text-align: center;">
+                      <h4 style="margin:0; padding:0 2em">La copa menstrual que te sugerimos probar es:</h4>
                       <h2>{{reco.name}}</h2>
                     </div>
                   </td>
@@ -364,12 +386,12 @@
             </td>
           </tr>
           <tr>
-            <td valign="middle" class="hero bg_white" style="padding: 0em 0 0em 0;">
+            <td valign="middle" class="hero bg_white">
               <a href="{{reco.linkToBuy}}">
               <img
                 src="{{reco.image}}"
                 alt=""
-                style="width: 300px; max-width: 600px; height: auto; margin: auto; display: block;"
+                class="img-prod"
               /></a>
             </td>
           </tr>
@@ -379,13 +401,11 @@
                 <tr>
                   <td>
                     <div class="text" style="padding: 0 2.5em; text-align: center;">
-                      <h4 style="font-size:18px; font-weight: 300;">{{reco.description}}</h4>
-                      <p style="font-size:18px; font-weight: 600; color:#b140a0; margin-bottom:-8px; font-family:'Montserrat',sans-serif;">Aprovechá ahora y te la enviamos gratis a tu casa!</p>
-                      <p><a href="{{reco.linkToBuy}}" style="font-weight: 600; padding: 10px 15px; display: inline-block; border-radius: 5px; background: #be89cf; color: #ffffff;" class="btn btn-primary">CONSEGUILA ACÁ</a></p>
-                      {{!-- <p style="font-size:18px; font-weight: 600; color: #22a7a5; margin-bottom:-8px; font-family:'Montserrat',sans-serif;">Promo Duo: $1,119 c/u</p>
-                      <p><a href="{{reco.linkToBuyDuo}}" style="font-weight: 600; padding: 10px 15px; display: inline-block; border-radius: 5px; background: #22a7a5; color: #ffffff;" class="btn btn-primary">COMPRAR PROMO DUO</a></p> --}}
-                      <h3 style="font-size:14px;">¿Tenés dudas? Escribinos por Whatsapp y te ayudamos.</h3>
-                      <p><a href="http://api.whatsapp.com/send?phone=+541162532264" style="padding: 10px 15px; font-weight:bold; display: inline-block; border-radius: 5px; border:solid 3px #25D366; background: #ffffff; color: #25D366;" class="btn btn-primary">INICIAR CHAT</a></p> 
+                      <h4 style="font-size:14px; font-weight: 300;">{{reco.description}}</h4>
+                      <p class="cta-p" style="margin:auto;">REGALO 🎁 Te dejamos un descuento, válido por las próximas 24hs + ENVÍO GRATIS!</p>
+                      <h3 style="font-size:15px;margin-top:5px;">Hacé click 👇 para usarlo ahora!</h3>
+                      <p><a href="https://asanacup.com/discount/24HWL4U7?redirect={{reco.redirect}}" class="btn btn-primary">Código: 24HWL4U7</a></p>
+                      <h3 style="font-size:14px;">También te podemos tomar el pedido manualmente vía Whatsapp <a style="font-weight:700" href="https://api.whatsapp.com/send?phone=+5491162532264&text=Hola%21%20Hice%20el%20test%20y%20me%20gustar%C3%ADa%20usar%20mi%20descuento%20%2A24HWL4U7%2A%20para%20el%20modelo%20{{reco.name}}%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0AMis%20datos%20para%20el%20env%C3%ADo%20son%3A%0A-%20Nombre%20y%20Apellido%3A%0A-%20Calle%2C%20n%C3%BAmero%2C%20dpto%3A%20%0A-%20Ciudad%20y%20C%C3%B3d.%20Postal%3A%0A-%20Provincia%3A%20%0A-%20Email%3A%20%0A-%20Telefono%3A%20%0A-%20Modelo%2C%20talle%20y%20cantidad%3A%0A-%20M%C3%A9todo%20de%20pago%20%28tarjeta%2Ftransferencia%2FMercadoPago%29%3A%20%0A-%20%C2%BFQuer%C3%A9s%20que%20te%20la%20enviemos%20a%20tu%20sucursal%20de%20Correo%3F%20%28m%C3%A1s%20r%C3%A1pido%20y%20seguro%29%3A%20SI%20%2F%20NO%20GRACIAS%20%0A%0AAguardo%20pr%C3%B3ximos%20pasos%21">HACIENDO CLICK AQUÍ.</a></h3>
                     </div>
                   </td>
                 </tr>
@@ -397,33 +417,26 @@
                         Recordá que la sugerencia de este test no es absoluta y pueden haber otros
                         talles y modelos que también resulten bien para tu caso.
                       </p>
+                      <p style="font-size: small;">
+                        (*) Descuento no acumulable con otros descuentos y/o promociones.
+                      </p>
                     </div>
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
-        </table>
-
-        <table
-          align="center"
-          role="presentation"
-          cellspacing="0"
-          cellpadding="0"
-          border="0"
-          width="100%"
-          style="margin: auto;"
-        >
           <tr>
             <td class="bg_light" style="text-align: center;">
               <p>Hecho con <span>💜</span> por el equipo de Asana
-              <span>
-               <a href="https://api.whatsapp.com/send?phone=549{{phone}}&text=Hola%20{{name}}%21%20Ac%C3%A1%20Andy%20de%20Asana%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0ATe%20escribo%20porque%20nos%20pone%20muy%20contentxs%20que%20hayas%20hecho%20el%20test%20de%20copa%20menstrual%21%20Si%20bien%20cuesta%20tomar%20la%20decisi%C3%B3n%20de%20probarla%2C%20te%20aseguro%20que%20es%20un%20camino%20de%20ida%20y%20estoy%20ac%C3%A1%20para%20acompa%C3%B1arte%20en%20tu%20transici%C3%B3n%20a%20la%20copa%20con%20tips%20y%20consejos%20%F0%9F%98%83%0ACreo%20que%20el%20modelo%20%2A{{reco.name}}%2A%20te%20va%20a%20resultar%20s%C3%BAper%20f%C3%A1cil%20de%20usar.%20Al%20tener%20una%20textura%20suave%20y%20dureza%20intermedia%2C%20sellar%C3%A1%20muy%20bien%20y%20evitar%C3%A1%20que%20tengas%20fugas%20o%20incomodidades.%0ATe%20dejo%20el%20link%20del%20producto%20donde%20tambi%C3%A9n%20ver%C3%A1s%20las%20experiencias%20de%20otras%20usuarias%20que%20la%20probaron%20%F0%9F%92%9C%20Avisame%20lo%20que%20necesites%21%0A{{reco.linkToBuyDuo}}">
-                🌍</span>
-                </a></p>
+              <span>                
+               <a href="https://api.whatsapp.com/send?phone=549{{phone}}&text=Hola%20{{name}}%21%20Soy%20Andy%20del%20equipo%20de%20Asana.%20Que%20bueno%20que%20hiciste%20el%20test%20de%20copa%20menstrual%21%20Te%20dejo%20el%20link%20de%20tu%20modelo%20Asana%20{{reco.name}}%20%F0%9F%92%9C%0A{{reco.linkToBuyDuo}}%0ATe%20gustar%C3%ADa%20saber%20algo%20m%C3%A1s%20sobre%20la%20copa%3F">
+                🌍
+                </a></span></p>
             </td>
           </tr>
         </table>
+
       </div>
     </center>
   </body>
