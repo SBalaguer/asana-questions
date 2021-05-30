@@ -10,7 +10,6 @@ router.get('/getCustomer', async (req, res, next) => {
     const phone = req.query.phone;
     const name = req.query.name;
     const reco = req.query.reco;
-    console.log("reco",reco)
     const answers = JSON.parse(req.query.answers);
     const tags = answers.reduce((acc,val,index)=> acc+=`${val.tag},`,"")+reco;
     let id;
@@ -36,11 +35,9 @@ router.get('/getCustomer', async (req, res, next) => {
             });
             res.json({success:true, type: "update" ,user:user.data.customers });
         }
-        // res.json({success:true});
     } catch (error) {
         res.json({ success: false, error: { message: error.message } }).status(500);
     }
-    res.json({success:true});
   });
 
 module.exports = router;

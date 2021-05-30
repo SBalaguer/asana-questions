@@ -6,6 +6,7 @@ const router = new Router();
 const nodemailer = require('nodemailer');
 const hbs = require('nodemailer-express-handlebars');
 const telFunct = require('../helpers/phone-check');
+const {tagGenerator} = require('../helpers/tag-gen');
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -32,12 +33,14 @@ router.post('/answers', async (req, res, next) => {
   const { email, name, phone } = req.body.userInfo;
   //Phone comes as string.
   let usePhone;
-  if (phone.toString().charAt(0)==="1" && phone.toString().charAt(1)==="5") {
-    usePhone = phone.toString().split("");
-    usePhone[1]="1";
-    usePhone = usePhone.join("");
-  } else {
-    usePhone = phone;
+  if (phone) {
+    if (phone.toString().charAt(0)==="1" && phone.toString().charAt(1)==="5") {
+      usePhone = phone.toString().split("");
+      usePhone[1]="1";
+      usePhone = usePhone.join("");
+    } else {
+      usePhone = phone;
+    }
   }
 
   const phoneData = telFunct.telefono(usePhone);
@@ -73,7 +76,7 @@ router.post('/answers', async (req, res, next) => {
           }
         });
       }
-      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${reco.name}&answers=${JSON.stringify(answers)}`);
+      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData}&name=${name}&reco=${tagGenerator(reco.name)}&answers=${JSON.stringify(answers)}`);
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }
@@ -84,7 +87,6 @@ router.post('/answers-anon', async (req, res, next) => {
 
   try {
       const a = await Answers.create({ email:"anonymous", name:"anonymous", answers, reco: reco.name }); 
-
       res.json({ success: true });
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
