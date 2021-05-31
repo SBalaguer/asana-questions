@@ -18,7 +18,7 @@ export default function Summary(props) {
           required
           value={props.userInfo['name']}
           onChange={props.handleUserInputChange}
-          placeholder="* Nombre o apodo preferido"
+          placeholder="* Nombre"
           autoComplete="off"
         />
         <input
