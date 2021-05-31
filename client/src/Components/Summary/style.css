@@ -5,14 +5,14 @@
   color: white;
   border: 0px;
   border-bottom: 1px solid white;
-  font-family: Montserrat,sans-serif;
+  font-family: Montserrat, sans-serif;
   background-color: transparent;
   font-size: 1.3em;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color:#22a7a5;
+  color: #22a7a5;
   opacity: 1; /* Firefox */
   font-weight: 500;
 }
@@ -41,4 +41,40 @@
 
 .user-info {
   width: 70%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  width: 100%;
+}
+
+.input-checkbox {
+  margin: 0;
+  padding: 0;
+}
+.skip-btn{
+  text-decoration: underline;
+  font-style: normal;
+  color: #22a7a5;
+  font-size: 11px;
+  text-align: center;
+  background-color: transparent
+}
+
+.view-result{
+  border: 0 solid transparent;
+  background-color: #04b5c7;
+  padding: 12px;
+  font-size: 1.5em;
+  margin: 2em;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Montserrat",sans-serif;
+  width: 100%;
+  border-radius: 34px;
+  max-width: 252px;
 }

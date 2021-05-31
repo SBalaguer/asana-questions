@@ -9,13 +9,13 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      <h3>Te enviaremos el resultado y un regalito especial 🎁</h3>
+      <h3>Te enviaremos el resultado y un regalito especial 🎁 </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
-          required
           type="text"
           name="name"
+          required
           value={props.userInfo['name']}
           onChange={props.handleUserInputChange}
           placeholder="* Nombre o apodo preferido"
@@ -23,9 +23,9 @@ export default function Summary(props) {
         />
         <input
           className="input"
-          required
           type="email"
           name="email"
+          required
           value={props.userInfo['email']}
           onChange={props.handleUserInputChange}
           placeholder="* Email"
@@ -35,6 +35,7 @@ export default function Summary(props) {
           className="input"
           type="number"
           name="phone"
+          required
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
           placeholder="Teléfono (sin '0' ni '15')"
@@ -42,10 +43,11 @@ export default function Summary(props) {
         />
         {(!props.error &&
           ((props.loading && <button disabled>Calculando...</button>) || (
-            <button class="view-result">VER SUGERENCIA</button>
+            <button class="view-result" type="submit">VER SUGERENCIA</button>
           ))) ||
           null}
       </form>
+      <button class="skip-btn" onClick={props.seeResult} style={{color:"#22a7a5", textDecoration:"underline"}}>Saltear este paso, solo ver resultado</button>
       {props.error && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>

@@ -14,3 +14,13 @@ export const sendAnswers = async (body) => {
     return response.error;
   }
 };
+
+export const sendAnswersAnon = async (body) => {
+  let response;
+  try {
+    response = await api.post('/answers-anon', body);
+    return response.data;
+  } catch (error) {
+    return response.error;
+  }
+};

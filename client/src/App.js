@@ -7,6 +7,7 @@ import Result from './Components/Result';
 
 import listOfQuestions from './static/questionsInfo.json';
 import { sendAnswers } from './Services/answers.js';
+import { sendAnswersAnon } from './Services/answers.js';
 import recomendationEngine from './Utils/recomendation-engine';
 import linksToBuy from './static/linksToBuy.json';
 
@@ -18,20 +19,26 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleInputChange = (event) => {
+  const handleInputChange = (event, questionName) => {
     const name = event.target.name;
     const value = event.target.value;
-    const questionExists = !![...answers].find((_answer) => _answer.question === name);
+    const questionExists = !![...answers].find((_answer) => _answer.
+    question === name);
+    const tag = listOfQuestions[questionName].options.find(option => option.label === value).tags;
+    
     if (questionExists) {
+      //question was not answered before
       const newAnswers = [...answers].map((_answer) => {
         if (_answer.question === name) {
           _answer.answer = value;
+          _answer.tag = tag;
         }
         return _answer;
       });
       setAnswers(newAnswers);
     } else {
-      setAnswers([...answers, { question: name, answer: value }]);
+      //question was answered before
+      setAnswers([...answers, { question: name, answer: value, tag}]);
     }
   };
 
@@ -52,7 +59,6 @@ function App() {
         })
         .join(' ');
     }
-
     setUserInfo({ ...userInfo, [name]: value });
   };
 
@@ -83,6 +89,33 @@ function App() {
       //setError(true);
     }
   };
+
+  const seeResult = async () => {
+    setLoading(true);
+    const reco = recomendationEngine(answers);
+    setReco(linksToBuy[reco]);
+    const info = {
+      answers,
+      reco: linksToBuy[reco]
+    };
+    try {
+      const response = await sendAnswersAnon(info);
+      if (response.success) {
+        setQuestion('result');
+      } else {
+        if (response.error.message.includes('Daily user sending quota exceeded')) {
+          setQuestion('result');
+        } else {
+          // setQuestion('result');
+          setError(true);
+        }
+      }
+    } catch (error) {
+      setQuestion('result');
+      //setError(true);
+    }
+    setQuestion('result');
+  }
 
   const handleNextQuestion = (i) => {
     if (i === 'last') {
@@ -213,6 +246,7 @@ function App() {
           listOfQuestions={listOfQuestions}
           loading={loading}
           userInfo={userInfo}
+          seeResult={seeResult}
           error={error}
         />
       );

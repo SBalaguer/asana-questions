@@ -3,40 +3,40 @@
     "linkToBuy": "https://asanacup.com/collections/frontpage/products/recta?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/recta",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/ESTERILIZACOR_COPA_RECTA_2_minimal.jpg?v=1611780325",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Forma cónica, capacidad equivalente a 5 tampones.  Vida útil: 10 años. Silicona alemana 100% hipoalergénica, atóxica y libre de BPA.",
+    "description": "Textura extra suave, dureza intermedia para máximo confort y menor riesgo de pérdidas. Forma cónica, capacidad equivalente a 5 tampones. Vida útil: 10 años. Calidad alemana, registrada en la FDA (USA). 100% silicona médica hipoalergénica, atóxica, libre de látex y BPA.",
     "name": "Recta, talle S",
-    "linkRedirect":"/products/recta"
+    "redirect":"/products/recta"
   },
   "rectaL": {
     "linkToBuy": "https://asanacup.com/products/recta?variant=31129843400813?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/recta",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/ESTERILIZACOR_COPA_RECTA_2_minimal.jpg?v=1611780325",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Forma cónica, capacidad equivalente a 6 tampones. Vida útil: 10 años. Silicona alemana 100% hipoalergénica, atóxica y libre de BPA.",
+    "description": "Textura extra suave, dureza intermedia para máximo confort y menor riesgo de pérdidas. Forma cónica, capacidad equivalente a 6 tampones. Vida útil: 10 años. Calidad alemana, registrada en la FDA (USA). 100% silicona médica hipoalergénica, atóxica, libre de látex y BPA.",
     "name": "Recta, talle L",
-    "linkRedirect":"/products/recta"
+    "redirect":"/products/recta"
   },
   "curvaS": {
     "linkToBuy": "https://asanacup.com/products/curva?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/curva",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/ESTERILIZACOR_COPA_CURVA_2_minimal.jpg?v=1611780594",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Capacidad equivalente a 6 tampones. Vida útil: 10 años. Silicona alemana 100% hipoalergénica, atóxica y libre de BPA.",
+    "description": "Textura extra suave, dureza intermedia para máximo confort y menor riesgo de pérdidas. Capacidad equivalente a 6 tampones. Vida útil: 10 años. Calidad alemana, registrada en la FDA (USA). 100% silicona médica hipoalergénica, atóxica, libre de látex y BPA.",
     "name": "Curva, talle S",
-    "linkRedirect":"/products/curva"
+    "redirect":"/products/curva"
   },
   "curvaL": {
     "linkToBuy": "https://asanacup.com/products/curva?variant=31885792084077?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/curva",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/ESTERILIZACOR_COPA_CURVA_2_minimal.jpg?v=1611780594",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Capacidad equivalente a 7 tampones. Vida útil: 10 años. Silicona alemana 100% hipoalergénica, atóxica y libre de BPA.",
+    "description": "Textura extra suave, dureza intermedia para máximo confort y menor riesgo de pérdidas. Capacidad equivalente a 7 tampones. Vida útil: 10 años. Calidad alemana, registrada en la FDA (USA). 100% silicona médica hipoalergénica, atóxica, libre de látex y BPA.",
     "name": "Curva, talle L",
-    "linkRedirect":"/products/curva"
+    "redirect":"/products/curva"
   },
   "mini": {
     "linkToBuy": "https://asanacup.com/collections/productos/products/mini-asana?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/mini-asana",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/ESTERILIZACOR_COPA_CURVA_2_minimal.jpg?v=1611780594",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Ideal para cérvix bajo ó adolescentes. Vida útil: 10 años. Silicona alemana 100% hipoalergénica, atóxica y libre de BPA. ",
+    "description": "Textura extra suave, dureza intermedia para máximo confort y menor riesgo de pérdidas. Ideal para cérvix bajo y adolescentes. Calidad alemana, registrada en la FDA (USA). 100% silicona médica hipoalergénica, atóxica, libre de látex y BPA.",
     "name": "Asana Mini",
-    "linkRedirect":"/products/mini-asana"
+    "redirect":"/products/mini-asana"
   }
 }
