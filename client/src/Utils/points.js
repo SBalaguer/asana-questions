@@ -5,7 +5,10 @@ const pointsSchema = [
       'Menos de 15 años': { 
         points: ['mini'], 
         exclude: ['rectaL', 'curvaL','rectaS', 'curvaS'] },
-      '15 a 24 años': { 
+      '15 a 18 años': { 
+        points: [], 
+        exclude: [] },
+      '19 a 24 años': { 
         points: [], 
         exclude: [] },
       '25 a 35 años': { 

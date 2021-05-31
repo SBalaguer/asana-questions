@@ -3,7 +3,8 @@
     "title": "¿Cuántos años tenés?",
     "options": [
       { "label": "Menos de 15 años", "value": "less18", "tags":"<15años"},
-      { "label": "15 a 24 años", "value": "18-24", "tags":"15-18años"},
+      { "label": "15 a 18 años", "value": "15-18", "tags":"15-18años"},
+      { "label": "19 a 24 años", "value": "19-24", "tags":"19-24años"},
       { "label": "25 a 35 años", "value": "25-35", "tags":"25-35años"},
       { "label": "36 años o más", "value": "36More", "tags":"+36años" }
     ]
