@@ -20,7 +20,9 @@ router.get('/getCustomer', async (req, res, next) => {
             const response = await axios.put(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers/${id}.json`,{
                 "customer": {
                     "id": id,
-                    "tags": tags
+                    "tags": tags,
+                    "accepts_marketing": true,
+                    "marketing_opt_in_level": "single_opt_in"
                 }
             });
             res.json({success:true, type: "update" ,user:user.data.customers });
@@ -30,7 +32,9 @@ router.get('/getCustomer', async (req, res, next) => {
                     "first_name": name,
                     "email": email,
                     "answers":answers,
-                    "tags":tags
+                    "tags":tags,
+                    "accepts_marketing": true,
+                    "marketing_opt_in_level": "single_opt_in"
                   }                 
             });
             res.json({success:true, type: "update" ,user:user.data.customers });
