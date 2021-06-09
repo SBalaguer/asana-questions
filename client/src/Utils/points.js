@@ -65,7 +65,7 @@ const pointsSchema = [
     question: 'Prefiero tener una copa menstrual que sea, por sobre todo...',
     answers: {
       'Más fácil de colocar y extraer de mi cuerpo': { 
-        points: ['rectaS','rectaL'], 
+        points: ['rectaS','rectaL','curvaS','curvaL','mini'], 
         exclude: [] },
       "Extra comodidad, aunque requiera un poco más de práctica al colocar y extraer.": {
         points: ['curvaS','curvaL','mini'],
@@ -86,7 +86,7 @@ const pointsSchema = [
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
         points: ['mini'],
-        exclude: []
+        exclude: ['rectaS', 'rectaL']
       },
       'No tengo idea. Prefiero no verificarlo.': {
         points: ['rectaS', 'curvaS', 'rectaL','curvaL','mini'],
