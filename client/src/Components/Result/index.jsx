@@ -20,7 +20,8 @@ export default function Result({ userInfo, reco }) {
               backgroundSize: 'contain'
             }}
           ></div>
-          <div className="product-description">{reco.description}</div>
+          <div className="product-description">{reco.description}
+          </div>
 
           <div className="buy">
           <div className="buyColumn">
@@ -31,26 +32,12 @@ export default function Result({ userInfo, reco }) {
                 PROBALA CON ENVÍO GRATIS!
             </a>
           </div>
-{/*           
-          <div className="buyColumn">
-          
-          <div className="product-price2 light">Promo Duo</div>
-          <div className="product-price2">$1,119 c/u</div>
-          <a className="buttonPromo" href={reco.linkToBuyDuo} target="_blank" rel="noopener noreferrer">
-              COMPRAR PROMO DUO
-          </a>
-          </div> */}
 
           </div>
-
-          {/* <div className="disclaimer bold">
-            Estamos haciendo <span className="dark">ENVÍOS GRATIS</span> a todo el país!
-            {/* <span role="img" aria-label="truck"> 🚚
-            </span>{' '} */}
         </div>
 
         <div className="disclaimer underline">
-          <a href="https://asanacup.com/pages/elegi-tu-copa" rel="noopener noreferrer">VER DIFERENCIAS ENTRE MODELOS
+          <a href="https://asanacup.com/pages/elegi-tu-copa?utm_source=test&utm_medium=testcompare&utm_campaign=cualestucopa" rel="noopener noreferrer">VER DIFERENCIAS ENTRE MODELOS
           </a>
           </div>
 
