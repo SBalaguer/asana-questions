@@ -7,8 +7,7 @@ const axios = require('axios');
 // Ruta get para un usuario con el mail
 router.get('/getCustomer', async (req, res, next) => {
     const email = req.query.email;
-    const phone = req.query.phone;
-    console.log(phone);
+    const phone = req.query.phone === 'false' ? false : req.query.phone;
     const name = req.query.name;
     const reco = req.query.reco;
     const answers = JSON.parse(req.query.answers);
@@ -24,11 +23,23 @@ router.get('/getCustomer', async (req, res, next) => {
                     "tags": tags,
                     "accepts_marketing": true,
                     "marketing_opt_in_level": "single_opt_in",
-                    ...(!phone && { "phone": phone })
+                    ...(phone && { "phone": phone })
                 }
             });
+
             res.json({ success: true, type: "update", user: user.data.customers });
         } else {
+            console.log({
+                "customer": {
+                    "first_name": name,
+                    "email": email,
+                    "answers": answers,
+                    "tags": tags,
+                    "accepts_marketing": true,
+                    "marketing_opt_in_level": "single_opt_in",
+                    ...(phone && { "phone": phone })
+                }
+            });
             const response = await axios.post(`https://${process.env.API_CUSTOMER_KEY}:${process.env.API_CUSTOMER_SECRET}@asana-cup.myshopify.com/admin/api/2021-04/customers.json`, {
                 "customer": {
                     "first_name": name,
@@ -37,7 +48,7 @@ router.get('/getCustomer', async (req, res, next) => {
                     "tags": tags,
                     "accepts_marketing": true,
                     "marketing_opt_in_level": "single_opt_in",
-                    ...(!phone && { "phone": phone })
+                    ...(phone && { "phone": phone })
                 }
             });
             res.json({ success: true, type: "update", user: user.data.customers });
