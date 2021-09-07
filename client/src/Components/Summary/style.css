@@ -59,10 +59,11 @@
 .skip-btn{
   text-decoration: underline;
   font-style: normal;
-  color: #22a7a5;
-  font-size: 11px;
+  color: #FFF;
+  font-size: 13px;
   text-align: center;
-  background-color: transparent
+  background-color: transparent;
+  margin:0;
 }
 
 .view-result{
