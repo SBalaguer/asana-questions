@@ -1,9 +1,7 @@
 .hello {
   font-size: 26px;
 }
-/* .subtitle {
-  color: #22a5a5;
-} */
+
 body {
   font-family: Montserrat,sans-serif,Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
@@ -54,10 +52,8 @@ justify-content: space-between;
 
 .button {
   padding: 0.7em;
-  width: 128px;
-  /* margin: 0.5em; */
-  background-color: #7e3e98;
-  border-radius: 5px;
+  background-color: #fb5234;
+  border-radius: 31px;
   height: 30px;
   color:#f7f7f7;
   text-decoration: none;
@@ -108,15 +104,18 @@ justify-content: space-between;
 }
 .underline{
   font-style: normal;
-  color:#22a7a5;
-  font-size:11px;
+  color:#11ba17;
+  font-size:12px;
   text-align:center;
+  font-weight: 600;
+  padding-left:6px
 }
 
-a{
-  color:#107573;
-  font-weight: 600;
-  font-size:12px;
+.whatsapp{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:5px;
 }
 
 .recommendation {
