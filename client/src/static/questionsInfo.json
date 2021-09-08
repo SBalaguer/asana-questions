@@ -81,6 +81,13 @@
     "subtitle": "Para localizarlo, debes introducir (con las manos limpias) tu dedo índice en la vagina hasta localizar algo similar a una nariz.",
     "options": [
       {
+        "label": "No tengo idea. Prefiero no verificarlo.",
+        "value": "noIdea",
+        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/noIdea.png?v=1617917232",
+        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
+        "tags":"CervixNoInfo" 
+      },
+      {
         "label": "Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)",
         "value": "tall",
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/alto.png?v=1617917232",
@@ -100,13 +107,6 @@
         "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/bajo.png?v=1617917232",
         "points": ["curvaS", "curvaL"], 
         "tags":"CervixBajo" 
-      },
-      {
-        "label": "No tengo idea. Prefiero no verificarlo.",
-        "value": "noIdea",
-        "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/noIdea.png?v=1617917232",
-        "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
-        "tags":"CervixNoInfo" 
       }
     ]
   },

@@ -47,7 +47,7 @@ export default function Summary(props) {
           ))) ||
           null}
       </form>
-      <button class="skip-btn" onClick={props.seeResult} style={{color:"#22a7a5", textDecoration:"underline"}}>Saltear este paso, solo ver resultado</button>
+      <button class="skip-btn" onClick={props.seeResult}>Saltear este paso</button>
       {props.error && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>
