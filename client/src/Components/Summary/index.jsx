@@ -38,7 +38,7 @@ export default function Summary(props) {
           required
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
-          placeholder="Teléfono (sin '0' ni '15')"
+          placeholder="Nro. Whatsapp (ej. 11 2222 3344)"
           autoComplete="off"
         />
         {(!props.error &&

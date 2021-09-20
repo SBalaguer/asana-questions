@@ -126,13 +126,13 @@
         "tags":"InteresSalud" 
       },
       {
-        "label": "Confort: Sentirme más cómoda con mis períodos.",
+        "label": "Confort: Sentirme más cómoda durante mi período.",
         "value": "confort",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
         "tags":"InteresConfort" 
       },
       {
-        "label": "Economía: Ahorrar los ~$2700 por año que gasto en toallitas y/o tampones.",
+        "label": "Economía: Ahorrar más de $3500 por año gastados en toallitas y/o tampones.",
         "value": "economy",
         "points": ["rectaS", "rectaL", "curvaS", "curvaL"], 
         "tags":"InteresAhorro" 
