@@ -32,11 +32,11 @@
     "redirect":"/products/curva&variant=31885792084077&utm_source=test&utm_medium=mailtest"
   },
   "mini": {
-    "linkToBuy": "https://asanacup.com/collections/productos/products/mini-asana?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
-    "linkToBuyDuo": "https://asanacup.com/products/mini-asana",
+    "linkToBuy": "https://asanacup.com/products/curva?variant=40678016942256?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
+    "linkToBuyDuo": "https://asanacup.com/products/curva?variant=40678016942256",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Curva_asana_copa_menstrual.jpg?v=1631042027",
     "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Asana Mini",
-    "redirect":"/products/mini-asana&utm_source=test&utm_medium=mailtest"
+    "name": "Curva, talle Mini",
+    "redirect":"/products/curva?variant=40678016942256&utm_source=test&utm_medium=mailtest"
   }
 }

@@ -77,11 +77,11 @@ const pointsSchema = [
     question: '¿Cuál es la altura de tu cérvix?',
     answers: {
       'Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)': {
-        points: ['rectaS', 'rectaL'],
+        points: ['rectaS', 'rectaL','mini','curvaS','curvaL'],
         exclude: []
       },
       'Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)': {
-        points: ['rectaS', 'rectaL','curvaS', 'curvaL'],
+        points: ['curvaS', 'curvaL'],
         exclude: []
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
