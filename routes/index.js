@@ -31,8 +31,10 @@ router.get('/answers', (req, res, next) => {
 router.post('/answers', async (req, res, next) => {
   const { answers, reco } = req.body;
   const { email, name, phone } = req.body.userInfo;
+
   //Phone comes as string.
   let usePhone;
+  console.log("phone",phone);
   if (phone) {
     if (phone.toString().charAt(0) === "1" && phone.toString().charAt(1) === "5") {
       usePhone = phone.toString().split("");
@@ -62,6 +64,7 @@ router.post('/answers', async (req, res, next) => {
           phone: phoneData
         }
       });
+      res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData ? workingPhone : false}&name=${name}&reco=${tagGenerator(reco.name)}&answers=${JSON.stringify(answers)}`);
     } else {
       await transporter.sendMail({
         from: `Asana Copa Menstrual <${process.env.MAIL}>`,
@@ -75,8 +78,8 @@ router.post('/answers', async (req, res, next) => {
           phone: phoneData
         }
       });
+      res.json({ success: true});
     }
-    res.redirect(`${process.env.BACK_END_URL}/customers/getCustomer?email=${email}&phone=${phoneData ? workingPhone : false}&name=${name}&reco=${tagGenerator(reco.name)}&answers=${JSON.stringify(answers)}`);
   } catch (error) {
     res.json({ success: false, error: { message: error.message } }).status(500);
   }
