@@ -38,7 +38,7 @@ export default function Summary(props) {
           required
           value={props.userInfo['phone']}
           onChange={props.handleUserInputChange}
-          placeholder="Nro. Whatsapp (ej. 11 2222 3344)"
+          placeholder="* Whatsapp"
           autoComplete="off"
         />
         {(!props.error &&
@@ -47,7 +47,7 @@ export default function Summary(props) {
           ))) ||
           null}
       </form>
-      <button class="skip-btn" onClick={props.seeResult}>Saltear este paso</button>
+      <button class="skip-btn" onClick={props.seeResult}>Prefiero no dejar mis datos</button>
       {props.error && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>
