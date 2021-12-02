@@ -101,7 +101,7 @@ export default function Question(props) {
           }
           disabled={value.length ? false : true}
           onClick={() => move('next')}
-          // onclick="window.scrollTo(0, 0);"
+          onclick="window.scrollTo(0, 0);"
         >
           {!last ? 'SIGUIENTE →' : 'FINALIZAR'}
         </button>
