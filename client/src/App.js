@@ -138,7 +138,7 @@ function App() {
             El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos.
             ¿Empezamos?
           </h3>
-          <button onClick={() => handleNextQuestion(0)}>INICIAR</button>
+          <button onClick={() => handleNextQuestion(0)}>CLICK PARA INICIAR</button>
           <Intro />
         </div>
       );
