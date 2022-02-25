@@ -1,0 +1,25 @@
+.container2{
+    width: 90%;
+    /* padding-top: 60vh; */
+    min-width: 300px;
+    position: relative;
+    bottom: -28em;
+}
+
+.img_copa{
+    max-width:300px;
+    text-align:center;
+}
+
+.table_text{
+    text-align:center;
+}
+
+a{
+    color:white;
+}
+
+.h3_intro{
+    font-size:1.2em;
+    color:#61f2f0 !important;
+}

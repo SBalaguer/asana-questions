@@ -10,7 +10,7 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 h3 {
@@ -33,14 +33,14 @@ h6 {
 
 button {
   border: 0px solid transparent;
-  border-radius: 5px;
-  background-color: #d4c5e0;
+  border-radius: 30px;
+  background-color:  #22a7a5;
   padding: 10px;
   font-size: 1.5em;
   margin: 1em;
   min-width: 100px;
   font-weight: 600;
-  color: #642f79;
+  color: #FFF;
   font-family: 'Montserrat',sans-serif;
 }
 

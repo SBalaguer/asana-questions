@@ -4,6 +4,7 @@ import './App.css';
 import Question from './Components/Question';
 import Summary from './Components/Summary';
 import Result from './Components/Result';
+import Intro from './Components/Intro';
 
 import listOfQuestions from './static/questionsInfo.json';
 import { sendAnswers } from './Services/answers.js';
@@ -137,7 +138,8 @@ function App() {
             El siguiente test te ayudará a conocer cuál es el modelo y talle de copa ideal para vos.
             ¿Empezamos?
           </h3>
-          <button onClick={() => handleNextQuestion(0)}>INICIAR</button>
+          <button onClick={() => handleNextQuestion(0)}>CLICK PARA INICIAR</button>
+          <Intro />
         </div>
       );
     case 1:
