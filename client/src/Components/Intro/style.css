@@ -1,6 +1,7 @@
 .container2{
     width: 90%;
     min-width: 300px;
+    max-width: 600px;
     position: absolute;
     top: 100vh;
     transform: translateY(-1%);
