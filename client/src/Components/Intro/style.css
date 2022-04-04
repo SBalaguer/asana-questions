@@ -1,9 +1,10 @@
 .container2{
     width: 90%;
-    /* padding-top: 60vh; */
     min-width: 300px;
-    position: relative;
-    bottom: -28em;
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-1%);
+    padding-top: 14px;
 }
 
 .img_copa{

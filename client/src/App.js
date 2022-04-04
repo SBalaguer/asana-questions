@@ -139,7 +139,7 @@ function App() {
             ¿Empezamos?
           </h3>
           <button onClick={() => handleNextQuestion(0)}>CLICK PARA INICIAR</button>
-          {/* <Intro /> */}
+          <Intro />
         </div>
       );
     case 1:
