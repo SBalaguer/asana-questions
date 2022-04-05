@@ -6,16 +6,16 @@ const pointsSchema = [
         points: ['mini'], 
         exclude: [] },
       '15 a 18 años': { 
-        points: ['mini'], 
+        points: ['mini','curvaS'], 
         exclude: [] },
       '19 a 24 años': { 
-        points: ['rectaL', 'curvaL','rectaS', 'curvaS'], 
+        points: ['curvaL', 'curvaS','mini'], 
         exclude: [] },
       '25 a 35 años': { 
-        points: ['rectaL', 'curvaL','rectaS', 'curvaS'], 
+        points: ['curvaL', 'curvaS','mini'], 
         exclude: [] },
       '36 años o más': { 
-        points: ['rectaL', 'curvaL','rectaS', 'curvaS'], 
+        points: ['curvaL','curvaS','mini'], 
         exclude: [] }
     }
   },
@@ -23,24 +23,24 @@ const pointsSchema = [
     question: '¿Tuviste partos?',
     answers: {
       'No tuve partos': { 
-        points: ['rectaS','curvaS','mini'], 
+        points: ['curvaS','mini'], 
         exclude: ['rectaL', 'curvaL'] },
       'Sí, tuve parto natural': { 
         points: ['rectaL', 'curvaL'], 
         exclude: ['rectaS', 'curvaS','mini'] },
       'Sí, tuve parto por cesárea': { 
-        points: ['rectaS', 'curvaS'], 
+        points: ['rectaS', 'curvaS','mini'], 
         exclude: ['rectaL', 'curvaL'] },
       'Sí, tuve parto por cesárea y natural': { 
         points: ['rectaL', 'curvaL'], 
-        exclude: ['rectaS', 'curvaS','mini'] }
+        exclude: ['rectaS'] }
     }
   },
   {
     question: '¿Cuál es tu experiencia con la copa menstrual?',
     answers: {
       'Nunca usé una copa menstrual.': {
-        points: ['rectaS', 'curvaS','rectaL','curvaL','mini'],
+        points: ['curvaS','curvaL','mini'],
         exclude: []
       },
       'La copa me parece larga para mí, o tuve que cortarle el tallo.': {
@@ -48,7 +48,7 @@ const pointsSchema = [
         exclude: []
       },
       'La copa me es difícil de agarrar o extraer.': {
-        points: ['rectaS', 'rectaL'],
+        points: ['curvaS', 'curvaL','mini'],
         exclude: []
       },
       'La copa me pierde o cuesta que se abra totalmente.': { 
@@ -77,8 +77,8 @@ const pointsSchema = [
     question: '¿Cuál es la altura de tu cérvix?',
     answers: {
       'Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)': {
-        points: ['rectaS', 'rectaL','mini','curvaS','curvaL'],
-        exclude: []
+        points: ['rectaL','curvaS','curvaL'],
+        exclude: ['mini']
       },
       'Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)': {
         points: ['curvaS', 'curvaL'],
@@ -89,7 +89,7 @@ const pointsSchema = [
         exclude: ['rectaS', 'rectaL']
       },
       'No tengo idea. Prefiero no verificarlo.': {
-        points: ['rectaS', 'curvaS', 'rectaL','curvaL','mini'],
+        points: ['curvaS', 'curvaL','mini'],
         exclude: []
       }
     }
@@ -98,7 +98,7 @@ const pointsSchema = [
     question: '¿Cómo te llevás con el deporte?',
     answers: {
       'No me gusta mucho el deporte.': {
-        points: ['rectaS', 'curvaS', 'rectaL','curvaL','mini'],
+        points: ['curvaS','curvaL','mini'],
         exclude: []
       },
       'Trato de hacer deporte 1 vez por semana.': {

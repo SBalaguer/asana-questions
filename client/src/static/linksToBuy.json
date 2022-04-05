@@ -18,25 +18,25 @@
   "curvaS": {
     "linkToBuy": "https://asanacup.com/products/curva?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/curva",
-    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Curva_asana_copa_menstrual.jpg?v=1631042027",
-    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Curva, talle S",
+    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/curva_asana_copa_menstrual_certificada.png?v=1649176954",
+    "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Esterilizador y bolsita respirable de regalo!",
+    "name": "Asana, talle S",
     "redirect":"/products/curva&utm_source=test&utm_medium=mailtest"
   },
   "curvaL": {
     "linkToBuy": "https://asanacup.com/products/curva?variant=31885792084077?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/curva",
-    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Curva_asana_copa_menstrual.jpg?v=1631042027",
-    "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Curva, talle L",
+    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/curva_asana_copa_menstrual_certificada.png?v=1649176954",
+    "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas. Esterilizador y bolsita respirable de regalo!",
+    "name": "Asana, talle L",
     "redirect":"/products/curva&variant=31885792084077&utm_source=test&utm_medium=mailtest"
   },
   "mini": {
     "linkToBuy": "https://asanacup.com/products/curva?variant=40678016942256?utm_source=test&utm_medium=testresult&utm_campaign=cualestucopa",
     "linkToBuyDuo": "https://asanacup.com/products/curva?variant=40678016942256",
-    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Curva_asana_copa_menstrual.jpg?v=1631042027",
-    "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Curva, talle Mini",
+    "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/curva_asana_copa_menstrual_certificada.png?v=1649176954",
+    "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas. Esterilizador y bolsita respirable de regalo!",
+    "name": "Asana, talle Mini",
     "redirect":"/products/curva?variant=40678016942256&utm_source=test&utm_medium=mailtest"
   }
 }

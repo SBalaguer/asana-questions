@@ -148,8 +148,19 @@
         background: #fff;
         border: 3px #b140a0 dashed;
         color: #b140a0;
-        font-size: 21px;
+        font-size: 18px;
       }
+      .btn-buy{
+        font-weight: 700;
+        padding: 10px 15px;
+        display: inline-block;
+        border-radius: 32px;
+        background: #fb5234;
+        color: #fff !important;
+        font-size: 22px;
+        margin-bottom:10px;
+      }
+
       .btn-secondary{
         padding: 10px 15px;
         font-weight: 800;
@@ -195,7 +206,7 @@
       }
       
       a{
-      	color: #be89cf;
+      	font-weight:bolder;
       }
 
       table{
@@ -362,7 +373,7 @@
                     <h1>
                       <a href="https://www.asanacup.com"
                         ><img
-                          src="https://cdn.shopify.com/s/files/1/0265/3719/7677/files/AsanaLogoVioleta-02_180x@2x.png?v=1571950571"
+                          src="https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Logo_Asana_Copa_Menstrual_web_29a95350-bbdd-46db-8707-102df18aca0b.png?v=1647897324"
                           style="width: 100px; max-width: 300px; height: auto; margin: auto; display: block;"
                       /></a>
                     </h1>
@@ -402,10 +413,11 @@
                   <td>
                     <div class="text" style="padding: 0 2.5em; text-align: center;">
                       <h4 style="font-size:14px; font-weight: 300;">{{reco.description}}</h4>
-                      <p class="cta-p" style="margin:auto;"> REGALO! 🎁 Llevate una CLASE DE YOGA ONLINE exclusiva para reconectarte con tu cuerpo!</p>
-                      <h3 style="font-size:15px;margin-top:5px;">Hacé click 👇 para usarlo ahora!</h3>
-                      <p><a href="https://asanacup.com/discount/YOGA2482?redirect={{reco.redirect}}" class="btn btn-primary">Código: YOGA2482</a></p>
-                      <h3 style="font-size:14px;">¿Preferís hacer tu pedido por Whatsapp? <a style="font-weight:700" href="https://api.whatsapp.com/send?phone=+5491162532264&text=Hola%21%20Hice%20el%20test%20y%20me%20gustar%C3%ADa%20usar%20mi%20codigo%20%2AYOGA2482%2A%20para%20el%20modelo%20{{reco.name}}%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0AMis%20datos%20para%20el%20env%C3%ADo%20son%3A%0A-%20Nombre%20y%20Apellido%3A%0A-%20Calle%2C%20n%C3%BAmero%2C%20dpto%3A%20%0A-%20Ciudad%20y%20C%C3%B3d.%20Postal%3A%0A-%20Provincia%3A%20%0A-%20Email%3A%20%0A-%20Telefono%3A%20%0A-%20Modelo%2C%20talle%20y%20cantidad%3A%0A-%20M%C3%A9todo%20de%20pago%20%28tarjeta%2Ftransferencia%2FMercadoPago%29%3A%20%0A-%20%C2%BFQuer%C3%A9s%20que%20te%20la%20enviemos%20a%20tu%20sucursal%20de%20Correo%3F%20%28m%C3%A1s%20r%C3%A1pido%20y%20seguro%29%3A%20SI%20%2F%20NO%20GRACIAS%20%0A%0AAguardo%20pr%C3%B3ximos%20pasos%21">HACÉ CLICK ACÁ⬅</a></h3>
+                      <p><a href="{{reco.linkToBuy}}" class="btn btn-buy">COMPRALA AHORA CON ENVÍO GRATIS</a></p>
+                      <p class="cta-p" style="margin:auto;"> 🎁 Por haber hecho el test, te GANASTE UNA CLASE DE YOGA para reconectarte con tu cuerpo!</p>
+                      <h3 style="font-size:15px;margin-top:5px;">Elegí la clase y el horario acá 👇</h3>
+                      <p><a href="https://asanacup.com/pages/gracias-por-tu-compra" class="btn btn-primary">QUIERO MI CLASE</a></p>
+                      <h3 style="font-size:14px;">¿Tenés dudas o consultas? Escribinos <a style="font-weight:700" href="https://api.whatsapp.com/send?phone=+5491162532264&text=Hola%21%20Hice%20el%20test%20y%20me%20gustar%C3%ADa%20usar%20mi%20codigo%20%2AYOGA2482%2A%20para%20el%20modelo%20{{reco.name}}%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0AMis%20datos%20para%20el%20env%C3%ADo%20son%3A%0A-%20Nombre%20y%20Apellido%3A%0A-%20Calle%2C%20n%C3%BAmero%2C%20dpto%3A%20%0A-%20Ciudad%20y%20C%C3%B3d.%20Postal%3A%0A-%20Provincia%3A%20%0A-%20Email%3A%20%0A-%20Telefono%3A%20%0A-%20Modelo%2C%20talle%20y%20cantidad%3A%0A-%20M%C3%A9todo%20de%20pago%20%28tarjeta%2Ftransferencia%2FMercadoPago%29%3A%20%0A-%20%C2%BFQuer%C3%A9s%20que%20te%20la%20enviemos%20a%20tu%20sucursal%20de%20Correo%3F%20%28m%C3%A1s%20r%C3%A1pido%20y%20seguro%29%3A%20SI%20%2F%20NO%20GRACIAS%20%0A%0AAguardo%20pr%C3%B3ximos%20pasos%21">HACIENDO CLICK ACÁ</a></h3>
                     </div>
                   </td>
                 </tr>
@@ -417,9 +429,9 @@
                         Recordá que la sugerencia de este test no es absoluta y pueden haber otros
                         talles y modelos que también resulten bien para tu caso.
                       </p>
-                      <p style="font-size: small;">
+                      {{!-- <p style="font-size: small;">
                         (*) La clase de Yoga la recibirás junto al número de seguimiento de tu envío. Si ya compraste, pedinos la clase por Whatsapp para que la puedas aprovechar.
-                      </p>
+                      </p> --}}
                     </div>
                   </td>
                 </tr>
