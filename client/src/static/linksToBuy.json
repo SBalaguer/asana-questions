@@ -4,7 +4,7 @@
     "linkToBuyDuo": "https://asanacup.com/products/recta",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Recta_asana_copa_menstrual.jpg?v=1631042027",
     "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Recta, talle S",
+    "name": "Recta, talle Standard",
     "redirect":"/products/recta&utm_source=test&utm_medium=mailtest"
   },
   "rectaL": {
@@ -12,7 +12,7 @@
     "linkToBuyDuo": "https://asanacup.com/products/recta",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/Pack_Recta_asana_copa_menstrual.jpg?v=1631042027",
     "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas.",
-    "name": "Recta, talle L",
+    "name": "Recta, talle Large",
     "redirect":"/products/recta&variant=31129843400813&utm_source=test&utm_medium=mailtest"
   },
   "curvaS": {
@@ -20,7 +20,7 @@
     "linkToBuyDuo": "https://asanacup.com/products/curva",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/curva_asana_copa_menstrual_certificada.png?v=1649176954",
     "description": "Textura extra suave para máximo confort y menor riesgo de pérdidas. Esterilizador y bolsita respirable de regalo!",
-    "name": "Asana, talle S",
+    "name": "Asana, talle Standard",
     "redirect":"/products/curva&utm_source=test&utm_medium=mailtest"
   },
   "curvaL": {
@@ -28,7 +28,7 @@
     "linkToBuyDuo": "https://asanacup.com/products/curva",
     "image": "https://cdn.shopify.com/s/files/1/0265/3719/7677/files/curva_asana_copa_menstrual_certificada.png?v=1649176954",
     "description": "Textura ultra suave para máximo confort y menor riesgo de pérdidas. Esterilizador y bolsita respirable de regalo!",
-    "name": "Asana, talle L",
+    "name": "Asana, talle Large",
     "redirect":"/products/curva&variant=31885792084077&utm_source=test&utm_medium=mailtest"
   },
   "mini": {
