@@ -5,9 +5,9 @@ function tagGenerator (name) {
           return "RectaS";
         case "Recta, talle L":
           return "RectaL";
-        case "Curva, talle S":
+        case "Asana Standard":
           return "CurvaS";
-        case "Curva, talle L":
+        case "Asana Large":
           return "CurvaL";
         case "Asana Mini":
           return "Mini";
