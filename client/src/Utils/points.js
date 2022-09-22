@@ -27,7 +27,7 @@ const pointsSchema = [
         exclude: ['rectaL', 'curvaL'] },
       'Sí, tuve parto natural': { 
         points: ['rectaL', 'curvaL'], 
-        exclude: ['rectaS', 'curvaS','mini'] },
+        exclude: ['rectaS'] },
       'Sí, tuve parto por cesárea': { 
         points: ['rectaS', 'curvaS','mini'], 
         exclude: ['rectaL', 'curvaL'] },
@@ -48,11 +48,11 @@ const pointsSchema = [
         exclude: []
       },
       'La copa me es difícil de agarrar o extraer.': {
-        points: ['curvaS', 'curvaL','mini'],
+        points: ['curvaS', 'curvaL'],
         exclude: []
       },
       'La copa me pierde o cuesta que se abra totalmente.': { 
-        points: ['curvaS','curvaL','mini'],
+        points: ['curvaS','mini'],
         exclude: [] 
       },
       'Mi copa menstrual está bien, pero me gustaría probar una diferente.': {
@@ -86,7 +86,7 @@ const pointsSchema = [
       },
       'Tengo cérvix bajo. Lo toco con una falange de dedo o menos (44mm o menos)': {
         points: ['mini'],
-        exclude: ['rectaS', 'rectaL']
+        exclude: ['rectaS', 'rectaL','curvaL']
       },
       'No tengo idea. Prefiero no verificarlo.': {
         points: ['curvaS', 'curvaL','mini'],
