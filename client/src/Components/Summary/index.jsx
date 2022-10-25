@@ -9,7 +9,7 @@ export default function Summary(props) {
 
   return (
     <div className="container">
-      <h3>Te enviaremos el resultado y un regalito especial 🎁 </h3>
+      <h3>Dejános tus datos y te enviaremos el resultado y $200 OFF en tu próxima compra! 🎁 </h3>
       <form className="user-info" onSubmit={props.handleSubmision}>
         <input
           className="input"
@@ -43,11 +43,11 @@ export default function Summary(props) {
         />
         {(!props.error &&
           ((props.loading && <button disabled>Calculando...</button>) || (
-            <button class="view-result" type="submit">VER SUGERENCIA</button>
+            <button class="view-result" type="submit">VER RESULTADO</button>
           ))) ||
           null}
       </form>
-      <button class="skip-btn" onClick={props.seeResult}>Prefiero no dejar mis datos</button>
+      <button class="skip-btn" onClick={props.seeResult}>SALTEAR ESTE PASO. Prefiero no dejar mis datos.</button>
       {props.error && (
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <h4 style={{ fontSize: '1.7em', marginBottom: '0.5em' }}>
