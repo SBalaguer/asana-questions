@@ -41,6 +41,7 @@ export default function Result({ userInfo, reco }) {
           Recordá que la sugerencia de este test no es absoluta y pueden haber otros talles y
           modelos que también resulten bien para tu caso.
         </div>
+
       </section>
     </div>
   );
