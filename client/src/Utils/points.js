@@ -78,7 +78,7 @@ const pointsSchema = [
     answers: {
       'Tengo cérvix alto. No llego o apenas llego a tocarlo con mi dedo más largo (más de 55mm)': {
         points: ['rectaL','curvaS','curvaL'],
-        exclude: ['mini']
+        exclude: []
       },
       'Tengo cérvix medio. Llego a tocarlo con dos falanges aproximadamente (entre 45mm y 55mm)': {
         points: ['curvaS', 'curvaL'],
