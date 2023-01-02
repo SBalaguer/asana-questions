@@ -28,11 +28,15 @@ app.use(function(req, res, next) {
 });
 
 app.use(
-  cors({
-    origin: [process.env.FRONT_END_URL],
-    credentials: true
-  })
+  cors()
 );
+
+// app.use(
+//   cors({
+//     origin: [process.env.FRONT_END_URL],
+//     credentials: true
+//   })
+// );
 
 // app.use(
 //   cors({
