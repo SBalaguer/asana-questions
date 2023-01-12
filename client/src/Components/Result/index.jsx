@@ -34,7 +34,7 @@ export default function Result({ userInfo, reco }) {
 
         <div className="whatsapp">
             <img src="https://cdn.shopify.com/s/files/1/0265/3719/7677/files/WhatsappIcon40x40.jpg?v=1631039928"></img>
-            <a className="underline" href={ 'https://api.whatsapp.com/send?phone=+5491126279976&text=Hola%21%20Hice%20el%20test%20y%20me%20interesa%20comprar%20el%20modelo%20' + reco.name + '%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0A'} rel="noopener noreferrer">o hacé tu pedido por Whatsapp!</a>
+            <a className="underline" href={ 'https://api.whatsapp.com/send?phone=5491162532264&text=Hola%21%20Hice%20el%20test%20y%20me%20interesa%20comprar%20el%20modelo%20' + reco.name + '%20%F0%9F%99%8B%E2%80%8D%E2%99%80%EF%B8%8F%0A'} rel="noopener noreferrer">o hacé tu pedido por Whatsapp!</a>
         </div>
 
         <div className="disclaimer">
