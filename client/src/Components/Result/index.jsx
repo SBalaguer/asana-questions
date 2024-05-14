@@ -25,7 +25,7 @@ export default function Result({ userInfo, reco }) {
           <div className="buy">
           <div className="buyColumn">
             <a className="button" href={reco.linkToBuy} target="_blank" rel="noopener noreferrer">
-                COMPRALA ACÁ CON ENVÍO GRATIS!
+                COMPRAR CON ESTERILIZADOR DE REGALO!
             </a>
           </div>
 
